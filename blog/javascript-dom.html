@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/blog.css" rel="stylesheet" />
+    <link href="../assets/css/rating-comments.css" rel="stylesheet" />
+  </head>
+  <body class="blog-page">
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="../index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <h1 class="sitename">N-T-DBlog</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="../about.html">Giới Thiệu</a></li>
+            <li><a href="../resume.html">Hồ Sơ</a></li>
+            <li><a href="../portfolio.html">Dự Án</a></li>
+            <li><a href="../blog.html" class="active">Blog</a></li>
+            <li><a href="../contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div class="blog-post">
+      <div class="container">
+        <div class="blog-article">
+          <div class="blog-header">
+            <span class="blog-category">JavaScript</span>
+            <h1 class="blog-title">JavaScript DOM - Khi Web "Sống" Dậy</h1>
+            <div class="blog-meta">
+              <span>6 tháng 10, 2025</span>
+              <span>Nguyễn Tiến Dũng</span>
+            </div>
+          </div>
+          <div class="blog-content">
+            <h2>Lần đầu "sờ" vào DOM</h2>
+            <p>
+              Tuần đầu học JavaScript, tôi chỉ console.log trong browser. Đến
+              khi mentor show tôi document.getElementById() và thay đổi
+              innerHTML, tôi như được mở mang tầm mắt! "HTML có thể thay đổi
+              được à?" - đó là suy nghĩ ngây thơ lúc đó.
+            </p>
+
+            <h2>getElementById vs querySelector - Cuộc chiến đầu tiên</h2>
+            <p>
+              Ban đầu tôi chỉ biết getElementById. Khi biết querySelector, tôi
+              nghĩ "Wow, CSS selector mà!" Từ đó chỉ dùng querySelector cho mọi
+              thứ. Sau này mới biết getElementById nhanh hơn cho single element.
+            </p>
+
+            <h2>Event Listeners - Phép màu tương tác</h2>
+            <p>
+              Lần đầu viết click event, tôi thấy như phù thủy! Click button →
+              console.log('Hello'). Simple nhưng magical! Rồi từ đó tôi "nghiện"
+              làm interactive elements: hover effects, form validation, modal
+              popups...
+            </p>
+
+            <h2>Event Delegation - Revelation moment</h2>
+            <p>
+              Khi có 100 buttons cần event listener, tôi viết 100
+              addEventListener. Performance tệ! Mentor dạy event delegation -
+              attach listener lên parent và check event.target. Mind blown với
+              event bubbling!
+            </p>
+
+            <h2>Những bug kinh điển với DOM</h2>
+            <ul>
+              <li>
+                <strong>Script chạy trước HTML load:</strong> querySelector
+                return null
+              </li>
+              <li>
+                <strong>Quên preventDefault():</strong> Form submit làm page
+                refresh
+              </li>
+              <li><strong>Memory leaks:</strong> Không removeEventListener</li>
+              <li>
+                <strong>NodeList vs Array:</strong> Không có map(), filter()
+              </li>
+            </ul>
+
+            <h2>DOM Manipulation patterns tôi hay dùng</h2>
+            <ul>
+              <li>
+                <strong>Toggle classes:</strong>
+                element.classList.toggle('active')
+              </li>
+              <li>
+                <strong>Create elements:</strong> createElement + appendChild
+              </li>
+              <li>
+                <strong>Form handling:</strong> FormData API cho modern forms
+              </li>
+              <li>
+                <strong>Dataset attributes:</strong> data-* attributes để store
+                info
+              </li>
+            </ul>
+
+            <h2>Performance lessons đắt giá</h2>
+            <p>
+              Project đầu tiên của tôi có 1000 DOM nodes và update liên tục. Lag
+              kinh khủng! Học được: batch DOM updates, use DocumentFragment,
+              cache selectors, avoid innerHTML trong loops.
+            </p>
+
+            <h2>Modern DOM APIs tôi yêu thích</h2>
+            <ul>
+              <li>
+                <strong>Intersection Observer:</strong> Lazy loading images
+              </li>
+              <li><strong>MutationObserver:</strong> Watch DOM changes</li>
+              <li><strong>ResizeObserver:</strong> Responsive components</li>
+              <li><strong>Web Components:</strong> Custom elements</li>
+            </ul>
+
+            <h2>Virtual DOM - Tại sao React ra đời</h2>
+            <p>
+              Sau khi struggle với DOM manipulation performance, tôi hiểu tại
+              sao React tạo Virtual DOM. Direct DOM manipulation expensive,
+              React diff và update optimally. Lesson: hiểu problem trước khi học
+              solution!
+            </p>
+
+            <h2>Tips thao tác DOM hiệu quả</h2>
+            <ul>
+              <li>
+                <strong>Cache selectors:</strong> const btn =
+                document.querySelector()
+              </li>
+              <li>
+                <strong>Sử dụng event delegation:</strong> Ít listeners hơn
+              </li>
+              <li>
+                <strong>Batch updates:</strong> DocumentFragment hoặc innerHTML
+              </li>
+              <li>
+                <strong>Tránh layout thrashing:</strong> Đọc properties trước,
+                ghi sau
+              </li>
+              <li><strong>Dùng CSS transforms:</strong> Thay vì top/left</li>
+            </ul>
+
+            <!-- Những Khó Khăn Khi Học -->
+            <div class="learning-challenges">
+              <h3>
+                <i class="bi bi-exclamation-triangle text-warning"></i> Những
+                Khó Khăn Khi Học DOM Manipulation
+              </h3>
+              <p class="challenge-intro">
+                Những thử thách phổ biến khi làm việc với DOM:
+              </p>
+
+              <div class="challenge-list">
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-1-circle text-danger"></i> Timing Issues với
+                    DOM Loading
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Script chạy trước khi HTML được
+                    parse, querySelector trả về null.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Sử dụng DOMContentLoaded event
+                    hoặc đặt script tag ở cuối body.
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-2-circle text-danger"></i> Event Delegation
+                    Phức Tạp
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Cần handle events cho nhiều
+                    elements giống nhau, performance kém với nhiều listeners.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Attach event listener lên parent
+                    element, kiểm tra event.target để xác định element được
+                    click.
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-3-circle text-danger"></i> Memory Leaks với
+                    Event Listeners
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Quên removeEventListener khi xóa
+                    elements, gây rò rỉ bộ nhớ.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Luôn cleanup event listeners, sử
+                    dụng AbortController hoặc WeakMap pattern.
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-4-circle text-danger"></i> Layout Thrashing
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Đọc và ghi DOM properties liên tục
+                    gây re-layout nhiều lần, performance kém.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Batch DOM operations, đọc tất cả
+                    properties trước, rồi mới ghi sau.
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-5-circle text-danger"></i> Cross-Browser
+                    Compatibility
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Các browser có cách implement DOM
+                    APIs khác nhau, đặc biệt là IE.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Sử dụng polyfills, kiểm tra
+                    feature support trước khi sử dụng, hoặc dùng libraries như
+                    jQuery.
+                  </p>
+                </div>
+              </div>
+
+              <div class="learning-tips">
+                <h4>
+                  <i class="bi bi-lightbulb text-success"></i> Tips học hiệu
+                  quả:
+                </h4>
+                <ul>
+                  <li>
+                    <strong>Thực hành với DevTools:</strong> Inspect elements,
+                    test selectors trong console
+                  </li>
+                  <li>
+                    <strong>Tạo mini projects:</strong> Todo list, image
+                    gallery, form validation
+                  </li>
+                  <li>
+                    <strong>Đọc MDN docs:</strong> Hiểu rõ từng DOM method và
+                    property
+                  </li>
+                  <li>
+                    <strong>Performance profiling:</strong> Sử dụng Chrome
+                    DevTools để đo performance
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Kết Luận</h2>
+            <p>
+              Thao tác DOM là kỹ năng cốt lõi của lập trình viên frontend. Dù có
+              React/Vue, hiểu DOM vẫn quan trọng. Từ getElementById đầu tiên đến
+              Web Components, hành trình DOM đã dạy tôi cách tương tác với web
+              theo cách sâu sắc nhất!
+            </p>
+
+            <div class="back-to-home">
+              <a href="../index.html">← Về trang chủ</a>
+            </div>
+          </div>
+
+          <!-- Rating Section -->
+          <div class="rating-section">
+            <div class="rating-header">
+              <h3>Đánh Giá Bài Viết</h3>
+              <p>Bài viết này có hữu ích với bạn không?</p>
+            </div>
+
+            <div class="rating-stats">
+              <div class="average-rating">
+                <div class="rating-number">4.5</div>
+                <div class="rating-stars-display">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <div class="rating-count">dựa trên 33 đánh giá</div>
+              </div>
+
+              <div class="rating-bars">
+                <div class="rating-bar">
+                  <span class="star-label">5★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 64%"></div>
+                  </div>
+                  <span class="bar-count">21</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">4★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 27%"></div>
+                  </div>
+                  <span class="bar-count">9</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">3★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 9%"></div>
+                  </div>
+                  <span class="bar-count">3</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">2★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">1★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rate-article">
+              <h4>Đánh giá bài viết này</h4>
+              <div class="star-rating" id="userRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <button class="rate-button" id="submitRating" disabled>
+                Gửi Đánh Giá
+              </button>
+              <div
+                class="rating-message"
+                id="ratingMessage"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="comments-section">
+            <div class="comments-header">
+              <h3>
+                <i class="bi bi-chat-dots"></i>
+                Bình Luận
+                <span class="comments-count">19</span>
+              </h3>
+              <p>Chia sẻ suy nghĩ và kinh nghiệm của bạn</p>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-form">
+              <h4>Để lại bình luận</h4>
+              <form id="commentForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="commentName">Họ Tên *</label>
+                    <input type="text" id="commentName" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="commentEmail">Email *</label>
+                    <input
+                      type="email"
+                      id="commentEmail"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="commentContent">Bình Luận *</label>
+                  <textarea
+                    id="commentContent"
+                    name="content"
+                    placeholder="Chia sẻ suy nghĩ của bạn về bài viết..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-comment">
+                  Gửi Bình Luận
+                </button>
+              </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list">
+              <!-- Sample Comment 1 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">V</div>
+                    <div class="author-info">
+                      <h5>Văn Khoa</h5>
+                      <span class="comment-date">1 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Performance tips về DOM manipulation cực hữu ích! Mình áp
+                    dụng event delegation và thấy app smooth hơn hẳn.
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">8</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sample Comment 2 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">P</div>
+                    <div class="author-info">
+                      <h5>Phong Lê</h5>
+                      <span class="comment-date">4 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Modern DOM APIs như Intersection Observer và
+                    MutationObserver mình chưa biết! Cảm ơn bạn đã chia sẻ, sẽ
+                    research thêm.
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">6</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Load More Comments -->
+            <div class="load-more-comments">
+              <button class="load-more-btn">Xem Thêm Bình Luận</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Nguyễn Tiến Dũng</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Blog Rating & Comments System -->
+    <script src="../assets/js/blog-rating-comments.js"></script>
+  </body>
+</html>

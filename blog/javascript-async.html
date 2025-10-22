@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Async</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/blog.css" rel="stylesheet" />
+    <link href="../assets/css/rating-comments.css" rel="stylesheet" />
+  </head>
+  <body class="blog-page">
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="../index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <h1 class="sitename">N-T-DBlog</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="../about.html">Giới Thiệu</a></li>
+            <li><a href="../resume.html">Hồ Sơ</a></li>
+            <li><a href="../portfolio.html">Dự Án</a></li>
+            <li><a href="../blog.html" class="active">Blog</a></li>
+            <li><a href="../contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div class="blog-post">
+      <div class="container">
+        <div class="blog-article">
+          <div class="blog-header">
+            <span class="blog-category">JavaScript</span>
+            <h1 class="blog-title">
+              JavaScript Async - Từ Callback Hell Đến Async Paradise
+            </h1>
+            <div class="blog-meta">
+              <span>6 tháng 10, 2025</span>
+              <span>Nguyễn Tiến Dũng</span>
+            </div>
+          </div>
+          <div class="blog-content">
+            <h2>Callback Hell - Địa Ngục Code Lồng Nhau</h2>
+            <p>
+              Lần đầu làm các lời gọi API với callbacks, tôi tạo ra "kim tự tháp
+              của sự tận thế". 6 tầng callbacks lồng nhau để lấy dữ liệu user →
+              posts → comments → likes. Code nhìn như kim tự tháp ngược, khó gỡ
+              lỗi, duy trì là cơn ác mộng!
+            </p>
+
+            <h2>setTimeout() - Bài Học Đầu Tiên Về Bất Đồng Bộ</h2>
+            <p>
+              Console.log sau setTimeout(0) vẫn chạy cuối cùng? Thật kỳ lạ! Đó
+              là lúc tôi học về Vòng Lặp Sự Kiện. JavaScript chạy đơn luồng
+              nhưng không chặn. Hàng đợi callback, ngăn xếp lời gọi - những khái
+              niệm mở mang tầm nhìn!
+            </p>
+
+            <h2>Promises - Ánh Sáng Cuối Đường Hầm</h2>
+            <p>
+              Khi ES6 ra đời với Promises, tôi như được giải thoát! Chuỗi
+              .then() thay vì callbacks lồng nhau. .catch() để xử lý lỗi. Cuối
+              cùng có thể viết code bất đồng bộ dễ đọc hơn! Dù vẫn có địa ngục
+              .then() đôi khi...
+            </p>
+
+            <h2>Async/Await - Thay Đổi Cuộc Chơi Thực Sự</h2>
+            <p>
+              ES2017 mang đến async/await - tôi bị sốc! Code bất đồng bộ trông
+              như code đồng bộ. Không cần chuỗi .then() nữa. try/catch để xử lý
+              lỗi. Đây chính là khoảnh khắc tôi "yêu" lập trình bất đồng bộ!
+            </p>
+
+            <h2>Những Lỗi Kinh Điển Với Code Bất Đồng Bộ</h2>
+            <ul>
+              <li><strong>Quên await:</strong> Promise chờ mãi mãi</li>
+              <li>
+                <strong>Song song vs Tuần tự:</strong> Promise.all() vs vòng lặp
+                for
+              </li>
+              <li>
+                <strong>Xử lý lỗi:</strong> Promise bị từ chối không được xử lý
+              </li>
+              <li>
+                <strong>Tình trạng đua:</strong> Thứ tự thực hiện bất đồng bộ
+              </li>
+            </ul>
+
+            <h2>Các Mẫu Promise Tôi Hay Dùng</h2>
+            <ul>
+              <li><strong>Promise.all():</strong> Thực thi song song</li>
+              <li><strong>Promise.race():</strong> Triển khai timeout</li>
+              <li><strong>Promise.allSettled():</strong> Tiếp tục dù có lỗi</li>
+              <li><strong>Chuỗi Promise:</strong> Thao tác tuần tự</li>
+            </ul>
+
+            <h2>Fetch API - Tạm Biệt XMLHttpRequest</h2>
+            <p>
+              Từ jQuery.ajax() sang fetch() API - cú pháp sạch hơn, dựa trên
+              promise, hỗ trợ stream. Nhưng cũng có bẫy: chỉ lỗi mạng mới từ
+              chối, 404 vẫn thành công. Bài học: đọc tài liệu kỹ!
+            </p>
+
+            <h2>Chiến Lược Xử Lý Lỗi</h2>
+            <p>
+              Xử lý lỗi bất đồng bộ khó hơn đồng bộ! Try/catch với async/await
+              được, nhưng các từ chối không được xử lý vẫn làm crash ứng dụng.
+              Học được: xử lý lỗi toàn cục, ranh giới lỗi hợp lý, cơ chế thử
+              lại.
+            </p>
+
+            <h2>Hiệu Suất Với Thao Tác Bất Đồng Bộ</h2>
+            <ul>
+              <li>
+                <strong>Tránh await không cần thiết:</strong> Song song khi có
+                thể
+              </li>
+              <li>
+                <strong>Promise.all() cho song song:</strong> Nhanh hơn tuần tự
+              </li>
+              <li><strong>Debouncing/Throttling:</strong> Giới hạn gọi API</li>
+              <li><strong>Chiến lược cache:</strong> Tránh request dư thừa</li>
+            </ul>
+
+            <h2>Web APIs Và Lập Trình Bất Đồng Bộ</h2>
+            <p>
+              Fetch, setTimeout, sự kiện DOM, Web Workers... Tất cả bất đồng bộ!
+              Hiểu Vòng Lặp Sự Kiện giúp gỡ lỗi vấn đề hiệu suất. Micro-tasks vs
+              macro-tasks - chi tiết quan trọng cho lập trình viên senior!
+            </p>
+
+            <h2>Các Mẫu Bất Đồng Bộ Node.js</h2>
+            <p>
+              Backend với Node.js, bất đồng bộ ở khắp nơi! File I/O, truy vấn cơ
+              sở dữ liệu, HTTP requests. Mẫu callback, tiện ích promisify,
+              Stream APIs. Async/await làm phát triển Node.js thú vị!
+            </p>
+
+            <h2>Kiểm Thử Code Bất Đồng Bộ</h2>
+            <p>
+              Kiểm thử code bất đồng bộ phức tạp! Mock APIs, điều khiển timers,
+              xử lý promises đúng cách. Jest với async/await, done callbacks,
+              return promises. Nhiều cách để kiểm thử, chọn mẫu nhất quán!
+            </p>
+
+            <h2>Các Mẫu Bất Đồng Bộ Hiện Đại</h2>
+            <ul>
+              <li>
+                <strong>Async generators:</strong> Vòng lặp for await...of
+              </li>
+              <li><strong>AbortController:</strong> Hủy requests</li>
+              <li><strong>Top-level await:</strong> Tính năng ES2022</li>
+              <li><strong>Async iterators:</strong> Xử lý stream</li>
+            </ul>
+
+            <!-- Những Khó Khăn Khi Học -->
+            <div class="learning-challenges">
+              <h3>
+                <i class="bi bi-exclamation-triangle text-warning"></i> Những
+                Khó Khăn Khi Học JavaScript Async
+              </h3>
+              <p class="challenge-intro">
+                Những thử thách mà lập trình viên gặp phải khi học lập trình bất
+                đồng bộ:
+              </p>
+
+              <div class="challenge-list">
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-1-circle text-danger"></i> Hiểu Event Loop
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Không hiểu cách JavaScript xử lý
+                    bất đồng bộ với single thread, setTimeout(0) vẫn chạy sau.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Học về call stack, callback
+                    queue, micro-tasks vs macro-tasks. Visualize qua tools như
+                    loupe.
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-2-circle text-danger"></i> Callback Hell
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Lồng nhiều callbacks tạo ra
+                    "pyramid of doom", code khó đọc và debug.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Sử dụng Promises, chia nhỏ
+                    functions, đặt tên cho callback functions thay vì anonymous.
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-3-circle text-danger"></i> Promise Chain vs
+                    Async/Await
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Không biết khi nào dùng .then()
+                    chain và khi nào dùng async/await.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Async/await cho sequential
+                    operations, Promise.all() cho parallel, .then() cho simple
+                    transformations.
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-4-circle text-danger"></i> Error Handling
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Quên handle errors trong async
+                    code, unhandled promise rejections crash app.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Luôn có .catch() cho Promises,
+                    try/catch cho async/await, global error handlers.
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-5-circle text-danger"></i> Race Conditions
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Async operations hoàn thành không
+                    theo thứ tự mong muốn, dẫn đến data inconsistency.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Sử dụng proper sequencing,
+                    locks, hoặc state management patterns. Kiểm tra component
+                    mounted trước khi setState.
+                  </p>
+                </div>
+              </div>
+
+              <div class="learning-tips">
+                <h4>
+                  <i class="bi bi-lightbulb text-success"></i> Tips học hiệu
+                  quả:
+                </h4>
+                <ul>
+                  <li>
+                    <strong>Visualize Event Loop:</strong> Sử dụng tools như
+                    JavaScript Visualizer để hiểu flow
+                  </li>
+                  <li>
+                    <strong>Thực hành với setTimeout:</strong> Test các timing
+                    scenarios khác nhau
+                  </li>
+                  <li>
+                    <strong>Build async projects:</strong> Weather app, chat
+                    app, API fetching
+                  </li>
+                  <li>
+                    <strong>Debug async code:</strong> Sử dụng await trong
+                    console, async debugger
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Kết Luận</h2>
+            <p>
+              Lập trình bất đồng bộ từ địa ngục callback đến thiên đường bất
+              đồng bộ! Hiểu Vòng Lặp Sự Kiện, thành thạo Promises, đón nhận
+              async/await. Bất đồng bộ là trái tim của JavaScript hiện đại - ứng
+              dụng web, máy chủ Node.js, tất cả đều bất đồng bộ!
+            </p>
+
+            <div class="back-to-home">
+              <a href="../index.html">← Về trang chủ</a>
+            </div>
+          </div>
+
+          <!-- Rating Section -->
+          <div class="rating-section">
+            <div class="rating-header">
+              <h3>Đánh Giá Bài Viết</h3>
+              <p>Bài viết này có hữu ích với bạn không?</p>
+            </div>
+
+            <div class="rating-stats">
+              <div class="average-rating">
+                <div class="rating-number">4.9</div>
+                <div class="rating-stars-display">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="rating-count">dựa trên 47 đánh giá</div>
+              </div>
+
+              <div class="rating-bars">
+                <div class="rating-bar">
+                  <span class="star-label">5★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 89%"></div>
+                  </div>
+                  <span class="bar-count">42</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">4★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 11%"></div>
+                  </div>
+                  <span class="bar-count">5</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">3★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">2★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">1★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rate-article">
+              <h4>Đánh giá bài viết này</h4>
+              <div class="star-rating" id="userRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <button class="rate-button" id="submitRating" disabled>
+                Gửi Đánh Giá
+              </button>
+              <div
+                class="rating-message"
+                id="ratingMessage"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="comments-section">
+            <div class="comments-header">
+              <h3>
+                <i class="bi bi-chat-dots"></i>
+                Bình Luận
+                <span class="comments-count">31</span>
+              </h3>
+              <p>Chia sẻ suy nghĩ và kinh nghiệm của bạn</p>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-form">
+              <h4>Để lại bình luận</h4>
+              <form id="commentForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="commentName">Họ Tên *</label>
+                    <input type="text" id="commentName" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="commentEmail">Email *</label>
+                    <input
+                      type="email"
+                      id="commentEmail"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="commentContent">Bình Luận *</label>
+                  <textarea
+                    id="commentContent"
+                    name="content"
+                    placeholder="Chia sẻ suy nghĩ của bạn về bài viết..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-comment">
+                  Gửi Bình Luận
+                </button>
+              </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list">
+              <!-- Sample Comment 1 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">K</div>
+                    <div class="author-info">
+                      <h5>Kiệt Trần</h5>
+                      <span class="comment-date">6 giờ trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Async/await vs Promises explanation rất clear! Mình đã từ
+                    callback hell → promise chains → async/await. Bài này tóm
+                    tắt journey của mình perfectly!
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">18</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sample Comment 2 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">H</div>
+                    <div class="author-info">
+                      <h5>Hà Nguyễn</h5>
+                      <span class="comment-date">2 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Event Loop và micro-tasks/macro-tasks phần này cần bookmark!
+                    Senior dev interview thường hỏi những concept này. Thanks
+                    for sharing! 🔥
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">14</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Load More Comments -->
+            <div class="load-more-comments">
+              <button class="load-more-btn">Xem Thêm Bình Luận</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Nguyễn Tiến Dũng</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Blog Rating & Comments System -->
+    <script src="../assets/js/blog-rating-comments.js"></script>
+  </body>
+</html>

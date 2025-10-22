@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chứng Chỉ - N-T-DBlog</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- Footer Custom CSS -->
+    <link href="assets/css/footer-custom.css" rel="stylesheet" />
+
+    <style>
+      .certificate-section {
+        padding: 80px 0;
+        background: #f8f9fa;
+      }
+
+      .certificate-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      /* Slogan Section */
+      .slogan-section {
+        padding: 60px 0;
+        margin-top: 80px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .slogan-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+
+      .slogan-quote {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .slogan-quote .bi-quote-left {
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 0.3);
+        margin-bottom: 20px;
+      }
+
+      .slogan-text {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        font-weight: 300;
+        margin-bottom: 30px;
+        font-style: italic;
+      }
+
+      .slogan-author {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      @media (max-width: 768px) {
+        .slogan-text {
+          font-size: 1.2rem;
+        }
+
+        .slogan-section {
+          padding: 40px 0;
+        }
+      }
+
+      .certificate-card {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .certificate-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+      }
+
+      .certificate-image {
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+      }
+
+      .certificate-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .certificate-card:hover .certificate-image img {
+        transform: scale(1.05);
+      }
+
+      .certificate-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(14, 29, 52, 0.8),
+          rgba(14, 29, 52, 0.6)
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .certificate-card:hover .certificate-overlay {
+        opacity: 1;
+      }
+
+      .view-btn {
+        background: #fff;
+        color: #0e1d34;
+        padding: 12px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .view-btn:hover {
+        background: #0e1d34;
+        color: #fff;
+        transform: scale(1.05);
+      }
+
+      .certificate-info {
+        padding: 25px;
+      }
+
+      .certificate-info h3 {
+        color: #0e1d34;
+        margin-bottom: 10px;
+        font-size: 1.4em;
+        font-weight: 600;
+      }
+
+      .certificate-info p {
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .certificate-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+      }
+
+      .certificate-date {
+        color: #0e1d34;
+        font-weight: 500;
+        font-size: 0.9em;
+      }
+
+      .certificate-badge {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 0.8em;
+        font-weight: 500;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-header h2 {
+        color: #0e1d34;
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .section-header p {
+        color: #666;
+        font-size: 1.1em;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .stats-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        padding: 60px 0;
+        margin: 50px 0;
+        border-radius: 20px;
+      }
+
+      .stat-item {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .stat-number {
+        font-size: 3em;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .stat-label {
+        font-size: 1.1em;
+        opacity: 0.9;
+      }
+
+      .learning-journey {
+        background: #fff;
+        padding: 60px 0;
+        margin: 40px 0;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .journey-content {
+        padding: 20px;
+      }
+
+      .journey-title {
+        color: #0e1d34;
+        font-size: 2.2em;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 40px;
+        position: relative;
+      }
+
+      .journey-title::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 2px;
+      }
+
+      .journey-story p {
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 25px;
+        text-align: justify;
+        padding: 0 10px;
+      }
+
+      .journey-story p strong {
+        color: #0e1d34;
+        font-weight: 600;
+      }
+
+      .journey-quote {
+        margin-top: 50px;
+        padding: 30px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 10px;
+      }
+
+      .journey-quote blockquote {
+        margin: 0;
+        font-size: 1.2em;
+        font-style: italic;
+        color: #0e1d34;
+        line-height: 1.6;
+      }
+
+      .journey-quote .bi-quote {
+        font-size: 2em;
+        color: #667eea;
+        margin-right: 10px;
+      }
+
+      .journey-quote footer {
+        margin-top: 15px;
+        font-size: 1em;
+        font-weight: 600;
+        color: #667eea;
+        text-align: right;
+      }
+
+      @media (max-width: 768px) {
+        .certificate-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .journey-title {
+          font-size: 1.8em;
+        }
+
+        .journey-story p {
+          font-size: 1em;
+          padding: 0 5px;
+        }
+
+        .journey-quote {
+          padding: 20px;
+        }
+
+        .section-header h2 {
+          font-size: 2em;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="certificate-page">
+    <!-- Header -->
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <h1 class="sitename">N-T-DBlog</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="about.html">Giới Thiệu</a></li>
+            <li><a href="resume.html">Hồ Sơ</a></li>
+            <li><a href="portfolio.html">Dự Án</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="certificate.html" class="active">Chứng Chỉ</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Certificates Section -->
+      <section class="certificate-section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <h2>Chứng Chỉ & Giải Thưởng</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <p>
+                  <strong>Bắt đầu từ con số 0</strong> - Khi mới bước chân vào
+                  thế giới lập trình, tôi hoàn toàn không có kiến thức gì về
+                  code. Những dòng "Hello World" đầu tiên khiến tôi vừa hồi hộp
+                  vừa phấn khích. Nhưng đó chỉ là khởi đầu cho một hành trình
+                  đầy thử thách.
+                </p>
+                <p>
+                  <strong>Những đêm thức trắng</strong> - Để đạt được chứng chỉ
+                  Java đầu tiên, tôi đã dành hơn 6 tháng học tập không ngừng
+                  nghỉ. Mỗi ngày sau giờ học chính, tôi dành 4-6 tiếng để ngồi
+                  trước máy tính, debug những đoạn code lỗi, đọc documentation
+                  và thực hành các bài tập từ cơ bản đến nâng cao.
+                </p>
+                <p>
+                  <strong>Vượt qua những thất bại</strong> - Có những lúc tôi
+                  muốn bỏ cuộc, đặc biệt khi gặp phải các concepts khó như OOP,
+                  Collections, hay Spring Framework. Những lần submit assignment
+                  và nhận về feedback "Needs Improvement" khiến tôi cảm thấy nản
+                  lòng. Nhưng mỗi lần như vậy, tôi lại càng quyết tâm hơn.
+                </p>
+              </div>
+              <div class="col-md-6">
+                <p>
+                  <strong>Phương pháp học tập hiệu quả</strong> - Tôi đã xây
+                  dựng cho mình một quy trình học tập khoa học: Sáng đọc lý
+                  thuyết, chiều thực hành code, tôi review và ghi chú. Cuối tuần
+                  làm project mini để consolidate kiến thức. Tôi luôn đặt target
+                  rõ ràng cho từng tháng và track progress hằng ngày.
+                </p>
+                <p>
+                  <strong>Học từ community</strong> - Tham gia các group
+                  Facebook, Discord, Stack Overflow đã giúp tôi rất nhiều. Việc
+                  giúp đỡ newbie khác không chỉ cũng có kiến thức mà còn giúp
+                  tôi nhận ra những gap trong hiểu biết của bản thân. Code
+                  review từ senior dev luôn là những bài học quý giá.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Statistics -->
+          <div class="stats-section" data-aos="fade-up">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 col-6">
+                  <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Chứng Chỉ</span>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Năm Học</span>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Khóa Học</span>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Nỗ Lực</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificates Grid -->
+          <div class="certificate-grid">
+            <!-- Certificate 1 -->
+            <div
+              class="certificate-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="certificate-image">
+                <img
+                  src="assets/img/certificate/chungnhan1.png"
+                  alt="Chứng nhận 1"
+                />
+                <div class="certificate-overlay">
+                  <a
+                    href="assets/img/certificate/chungnhan1.png"
+                    class="view-btn glightbox"
+                  >
+                    <i class="bi bi-eye"></i> Xem Chi Tiết
+                  </a>
+                </div>
+              </div>
+              <div class="certificate-info">
+                <h3>Chứng Nhận Database Design Champion 2024</h3>
+                <p>
+                  Chứng nhận hoàn thành khóa học thiết kế cơ sở dữ liệu, bao gồm
+                  các khái niệm về modeling, normalization, indexing và tối ưu
+                  hóa hiệu suất database.
+                </p>
+                <div class="certificate-meta">
+                  <span class="certificate-date">
+                    <i class="bi bi-calendar"></i> Tháng 6, 2024
+                  </span>
+                  <span class="certificate-badge">Database</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div
+              class="certificate-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="certificate-image">
+                <img
+                  src="assets/img/certificate/chungnhan2.jpg"
+                  alt="Chứng nhận 2"
+                />
+                <div class="certificate-overlay">
+                  <a
+                    href="assets/img/certificate/chungnhan2.jpg"
+                    class="view-btn glightbox"
+                  >
+                    <i class="bi bi-eye"></i> Xem Chi Tiết
+                  </a>
+                </div>
+              </div>
+              <div class="certificate-info">
+                <h3>Top 100 Thí Sinh Xuất Sắc Nhất HDBank Hackathon 2025</h3>
+                <p>
+                  Chứng nhận đạt thành tích Top 100 thí sinh xuất sắc nhất trong
+                  cuộc thi HDBank Hackathon 2025 - giải pháp ứng dụng AI và
+                  Blockchain trong lĩnh vực tài chính ngân hàng.
+                </p>
+                <div class="certificate-meta">
+                  <span class="certificate-date">
+                    <i class="bi bi-calendar"></i> Tháng 1, 2025
+                  </span>
+                  <span class="certificate-badge">Hackathon</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div
+              class="certificate-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="certificate-image">
+                <img
+                  src="assets/img/certificate/chungnhan3.png"
+                  alt="Chứng nhận 3"
+                />
+                <div class="certificate-overlay">
+                  <a
+                    href="assets/img/certificate/chungnhan3.png"
+                    class="view-btn glightbox"
+                  >
+                    <i class="bi bi-eye"></i> Xem Chi Tiết
+                  </a>
+                </div>
+              </div>
+              <div class="certificate-info">
+                <h3>Chứng Nhận Networking Basics</h3>
+                <p>
+                  Chứng nhận hoàn thành khóa học cơ bản về mạng máy tính, bao
+                  gồm các giao thức mạng, TCP/IP, routing, switching và bảo mật
+                  mạng cơ bản.
+                </p>
+                <div class="certificate-meta">
+                  <span class="certificate-date">
+                    <i class="bi bi-calendar"></i> Tháng 10, 2024
+                  </span>
+                  <span class="certificate-badge">Networking</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 4 -->
+            <div
+              class="certificate-card"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="certificate-image">
+                <img
+                  src="assets/img/certificate/chungnhan4.png"
+                  alt="Chứng nhận 4"
+                />
+                <div class="certificate-overlay">
+                  <a
+                    href="assets/img/certificate/chungnhan4.png"
+                    class="view-btn glightbox"
+                  >
+                    <i class="bi bi-eye"></i> Xem Chi Tiết
+                  </a>
+                </div>
+              </div>
+              <div class="certificate-info">
+                <h3>Chứng Nhận JavaScript Essentials 1</h3>
+                <p>
+                  Chứng nhận hoàn thành khóa học JavaScript Essentials 1, nắm
+                  vững các kiến thức cơ bản về JavaScript, syntax, variables,
+                  data types, operators và control flow.
+                </p>
+                <div class="certificate-meta">
+                  <span class="certificate-date">
+                    <i class="bi bi-calendar"></i> Tháng 11, 2021
+                  </span>
+                  <span class="certificate-badge">JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 5 -->
+            <div
+              class="certificate-card"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div class="certificate-image">
+                <img
+                  src="assets/img/certificate/chungnhan5.png"
+                  alt="Chứng nhận 5"
+                />
+                <div class="certificate-overlay">
+                  <a
+                    href="assets/img/certificate/chungnhan5.png"
+                    class="view-btn glightbox"
+                  >
+                    <i class="bi bi-eye"></i> Xem Chi Tiết
+                  </a>
+                </div>
+              </div>
+              <div class="certificate-info">
+                <h3>Chứng Nhận JavaScript Essentials 2</h3>
+                <p>
+                  Chứng nhận hoàn thành khóa học JavaScript Essentials 2, nâng
+                  cao kỹ năng về functions, objects, arrays, DOM manipulation và
+                  xử lý sự kiện trong JavaScript.
+                </p>
+                <div class="certificate-meta">
+                  <span class="certificate-date">
+                    <i class="bi bi-calendar"></i> Tháng 5, 2025
+                  </span>
+                  <span class="certificate-badge">JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slogan Section -->
+        <div class="slogan-section" data-aos="fade-up" data-aos-delay="600">
+          <div class="container">
+            <div class="text-center">
+              <blockquote class="slogan-quote">
+                <i class="bi bi-quote-left"></i>
+                <p class="slogan-text">
+                  "Code sạch và trải nghiệm người dùng tuyệt vời là mục tiêu tôi
+                  hướng đến trong mọi dự án."
+                </p>
+                <footer class="slogan-author">— Nguyễn Tiến Dũng</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- About Section -->
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-about">
+              <h4>Nguyễn Tiến Dũng</h4>
+              <p>
+                Full-Stack Developer chuyên về Java và JavaScript. Tạo ra các
+                ứng dụng web hiện đại, responsive và tối ưu hiệu suất.
+              </p>
+              <div class="footer-contact">
+                <p><i class="bi bi-geo-alt"></i> Hồ Chí Minh, Việt Nam</p>
+                <p>
+                  <i class="bi bi-envelope"></i> nguyentiendungt123@email.com
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-3">
+            <div class="footer-links">
+              <h4>Liên Kết</h4>
+              <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="resume.html">Hồ Sơ</a></li>
+                <li><a href="portfolio.html">Dự Án</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Blog Links -->
+          <div class="col-lg-3 col-md-3">
+            <div class="footer-links">
+              <h4>Blog Kỹ Thuật</h4>
+              <ul>
+                <li><a href="blog/java-co-ban.html">Java Cơ Bản</a></li>
+                <li>
+                  <a href="blog/javascript-co-ban.html">JavaScript Cơ Bản</a>
+                </li>
+                <li><a href="blog/java-spring.html">Spring Framework</a></li>
+                <li><a href="blog/javascript-es6.html">JavaScript ES6+</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Social & Newsletter -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-social">
+              <h4>Kết Nối</h4>
+              <p>Theo dõi để cập nhật những kiến thức mới nhất về lập trình</p>
+              <div class="social-links d-flex mb-3">
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="github"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright text-center">
+            <p>
+              © <strong>Nguyễn Tiến Dũng</strong> - Tất cả quyền được bảo lưu
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

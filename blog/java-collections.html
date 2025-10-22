@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Collections</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/blog.css" rel="stylesheet" />
+    <link href="../assets/css/rating-comments.css" rel="stylesheet" />
+  </head>
+  <body class="blog-page">
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <h1 class="sitename">N-T-DBlog</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="../about.html">Giới Thiệu</a></li>
+            <li><a href="../resume.html">Hồ Sơ</a></li>
+            <li><a href="../portfolio.html">Dự Án</a></li>
+            <li><a href="../blog.html" class="active">Blog</a></li>
+            <li><a href="../contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div class="blog-post">
+      <div class="container">
+        <div class="blog-article">
+          <div class="blog-header">
+            <span class="blog-category">Java</span>
+            <h1 class="blog-title">
+              Java Collections - Cuộc Phiêu Lưu Với Dữ Liệu
+            </h1>
+            <div class="blog-meta">
+              <span>6 tháng 10, 2025</span>
+              <span>Nguyễn Tiến Dũng</span>
+            </div>
+          </div>
+          <div class="blog-content">
+            <h2>Khi Array không còn đủ</h2>
+            <p>
+              Sau khi làm quen với array, tôi nghĩ mình đã master việc lưu trữ
+              dữ liệu. Đến khi làm project quản lý sinh viên với 1000+ records,
+              tôi mới hiểu tại sao cần Collections. Array cố định size, khó
+              add/remove, còn Collections thì linh hoạt hơn nhiều!
+            </p>
+
+            <h2>ArrayList vs LinkedList - Cuộc chiến đầu tiên</h2>
+            <p>
+              Mentor hỏi: "Em dùng ArrayList hay LinkedList?" Tôi trả lời bừa:
+              "ArrayList". Hắn cười và bảo làm bài test. Kết quả: ArrayList
+              nhanh hơn khi access theo index, LinkedList nhanh hơn khi
+              insert/delete ở giữa. Bài học đầu tiên: hiểu performance
+              characteristics!
+            </p>
+
+            <h2>HashSet - Lần đầu gặp "unique"</h2>
+            <p>
+              Dự án đầu tiên cần lưu danh sách email unique. Tôi dùng ArrayList
+              và viết loop check duplicate. Code dài và chậm! Mentor show cho
+              tôi HashSet - chỉ cần add(), nó tự động loại bỏ duplicate. Mind
+              blown!
+            </p>
+
+            <h2>HashMap - Cách mạng trong tư duy</h2>
+            <p>
+              Trước khi biết HashMap, tôi loop qua List để tìm object theo ID.
+              O(n) complexity! Khi biết HashMap với key-value, tìm kiếm thành
+              O(1). Từ đó tôi hiểu tại sao người ta nói "choose right data
+              structure".
+            </p>
+
+            <h2>Những sai lầm kinh điển với Collections</h2>
+            <ul>
+              <li>
+                <strong>Dùng Vector thay ArrayList:</strong> Không biết Vector
+                synchronized và chậm hơn
+              </li>
+              <li>
+                <strong>Quên override equals/hashCode:</strong> HashSet, HashMap
+                không hoạt động đúng
+              </li>
+              <li>
+                <strong>Modify collection khi iterate:</strong>
+                ConcurrentModificationException xuất hiện
+              </li>
+              <li>
+                <strong>Dùng sai Collection:</strong> TreeSet cho performance
+                nhưng cần Comparable
+              </li>
+            </ul>
+
+            <h2>Stream API - Game changer</h2>
+            <p>
+              Java 8 ra đời với Stream API, tôi như được sinh ra lần thứ hai!
+              Thay vì viết loop dài để filter, map, reduce, giờ chỉ cần chain
+              operations. Code ngắn hơn, đọc như English!
+            </p>
+
+            <h2>Hiệu năng - Bài học đắt giá</h2>
+            <p>
+              Dự án production đầu tiên của tôi bị lag vì sai chọn Collection.
+              LinkedList với 10k elements, access by index = disaster! Từ đó tôi
+              luôn benchmark và profile trước khi chọn data structure.
+            </p>
+
+            <h2>Tips chọn Collection phù hợp</h2>
+            <ul>
+              <li>
+                <strong>ArrayList:</strong> Khi cần access by index và ít
+                insert/delete
+              </li>
+              <li>
+                <strong>LinkedList:</strong> Khi thường xuyên insert/delete ở
+                giữa
+              </li>
+              <li>
+                <strong>HashSet:</strong> Cần unique elements và không care thứ
+                tự
+              </li>
+              <li><strong>TreeSet:</strong> Cần unique + sorted elements</li>
+              <li><strong>HashMap:</strong> Key-value lookup nhanh</li>
+              <li><strong>TreeMap:</strong> Key-value + sorted by key</li>
+            </ul>
+
+            <!-- Những Khó Khăn Khi Học -->
+            <div class="learning-challenges">
+              <h3><i class="bi bi-exclamation-triangle text-warning"></i> Những Khó Khăn Khi Học Java Collections</h3>
+              <p class="challenge-intro">Những thử thách mà developer gặp phải khi học Java Collections Framework:</p>
+              
+              <div class="challenge-list">
+                <div class="challenge-item">
+                  <h4><i class="bi bi-1-circle text-danger"></i> Chọn Collection Type Phù Hợp</h4>
+                  <p><strong>Vấn đề:</strong> Không biết khi nào dùng ArrayList, LinkedList, HashSet, TreeSet... dẫn đến performance kém.</p>
+                  <p><strong>Giải pháp:</strong> Học time complexity của từng operation. ArrayList cho random access, LinkedList cho insertion/deletion.</p>
+                </div>
+                
+                <div class="challenge-item">
+                  <h4><i class="bi bi-2-circle text-danger"></i> equals() và hashCode() Contract</h4>
+                  <p><strong>Vấn đề:</strong> HashMap, HashSet không hoạt động đúng khi custom objects không override equals/hashCode properly.</p>
+                  <p><strong>Giải pháp:</strong> Luôn override cả equals() và hashCode() cùng nhau. Sử dụng IDE generate hoặc Objects.hash().</p>
+                </div>
+                
+                <div class="challenge-item">
+                  <h4><i class="bi bi-3-circle text-danger"></i> ConcurrentModificationException</h4>
+                  <p><strong>Vấn đề:</strong> Modify collection (add/remove) khi đang iterate bằng enhanced for loop hoặc iterator.</p>
+                  <p><strong>Giải pháp:</strong> Sử dụng Iterator.remove() hoặc collect elements cần remove trước, sau đó removeAll().</p>
+                </div>
+                
+                <div class="challenge-item">
+                  <h4><i class="bi bi-4-circle text-danger"></i> Generics và Type Safety</h4>
+                  <p><strong>Vấn đề:</strong> Raw types, wildcard generics (?), type erasure gây confusion và ClassCastException.</p>
+                  <p><strong>Giải pháp:</strong> Luôn sử dụng generics, hiểu bounded wildcards (? extends, ? super), tránh raw types.</p>
+                </div>
+                
+                <div class="challenge-item">
+                  <h4><i class="bi bi-5-circle text-danger"></i> Performance Characteristics</h4>
+                  <p><strong>Vấn đề:</strong> Không hiểu time complexity: ArrayList.remove(0) là O(n), HashMap resize overhead.</p>
+                  <p><strong>Giải pháp:</strong> Học Big O notation, benchmark performance, hiểu internal implementation của từng Collection.</p>
+                </div>
+              </div>
+              
+              <div class="learning-tips">
+                <h4><i class="bi bi-lightbulb text-success"></i> Tips học hiệu quả:</h4>
+                <ul>
+                  <li><strong>Visualize data structures:</strong> Hiểu internal implementation qua diagrams</li>
+                  <li><strong>Benchmark performance:</strong> Test với data size khác nhau để hiểu complexity</li>
+                  <li><strong>Practice with real scenarios:</strong> Implement cache, shopping cart, user management</li>
+                  <li><strong>Read source code:</strong> JDK source code của ArrayList, HashMap rất educational</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Kết Luận</h2>
+            <p>
+              Collections không chỉ là công cụ để lưu trữ dữ liệu, mà còn ảnh hưởng
+              lớn đến hiệu suất và chất lượng code. Hiểu rõ từng loại Collection
+              và biết khi nào dùng cái gì là kỹ năng quan trọng của mọi Java
+              developer!
+            </p>
+
+            <div class="back-to-home">
+              <a href="../index.html">← Về trang chủ</a>
+            </div>
+          </div>
+
+          <!-- Rating Section -->
+          <div class="rating-section">
+            <div class="rating-header">
+              <h3>Đánh Giá Bài Viết</h3>
+              <p>Bài viết này có hữu ích với bạn không?</p>
+            </div>
+
+            <div class="rating-stats">
+              <div class="average-rating">
+                <div class="rating-number">4.6</div>
+                <div class="rating-stars-display">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <div class="rating-count">dựa trên 28 đánh giá</div>
+              </div>
+
+              <div class="rating-bars">
+                <div class="rating-bar">
+                  <span class="star-label">5★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 68%"></div>
+                  </div>
+                  <span class="bar-count">19</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">4★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 25%"></div>
+                  </div>
+                  <span class="bar-count">7</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">3★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 7%"></div>
+                  </div>
+                  <span class="bar-count">2</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">2★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">1★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rate-article">
+              <h4>Đánh giá bài viết này</h4>
+              <div class="star-rating" id="userRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <button class="rate-button" id="submitRating" disabled>Gửi Đánh Giá</button>
+              <div class="rating-message" id="ratingMessage" style="display: none"></div>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="comments-section">
+            <div class="comments-header">
+              <h3>
+                <i class="bi bi-chat-dots"></i>
+                Bình Luận
+                <span class="comments-count">12</span>
+              </h3>
+              <p>Chia sẻ suy nghĩ và kinh nghiệm của bạn</p>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-form">
+              <h4>Để lại bình luận</h4>
+              <form id="commentForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="commentName">Họ Tên *</label>
+                    <input type="text" id="commentName" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="commentEmail">Email *</label>
+                    <input type="email" id="commentEmail" name="email" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="commentContent">Bình Luận *</label>
+                  <textarea
+                    id="commentContent"
+                    name="content"
+                    placeholder="Chia sẻ suy nghĩ của bạn về Collections trong Java..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-comment">Gửi Bình Luận</button>
+              </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list">
+              <!-- Sample Comment 1 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">M</div>
+                    <div class="author-info">
+                      <h5>Minh Trần</h5>
+                      <span class="comment-date">2 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Collections trong Java thật sự rất powerful! Bài viết này giải thích rõ ràng về performance của từng loại. ArrayList vs LinkedList comparison rất hữu ích!
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">8</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sample Comment 2 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">H</div>
+                    <div class="author-info">
+                      <h5>Hải Nguyễn</h5>
+                      <span class="comment-date">4 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    HashMap vs TreeMap phần này mình cần đọc lại nhiều lần. Cảm ơn bạn đã so sánh chi tiết về time complexity!
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">5</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Load More Comments -->
+            <div class="load-more-comments">
+              <button class="load-more-btn">Xem Thêm Bình Luận</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Nguyễn Tiến Dũng</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- Blog Rating & Comments System -->
+    <script src="../assets/js/blog-rating-comments.js"></script>
+  </body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Cơ Bản</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/blog.css" rel="stylesheet" />
+    <link href="../assets/css/rating-comments.css" rel="stylesheet" />
+  </head>
+  <body class="blog-page">
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="../index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <h1 class="sitename">N-T-DBlog</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="../about.html">Giới Thiệu</a></li>
+            <li><a href="../resume.html">Hồ Sơ</a></li>
+            <li><a href="../portfolio.html">Dự Án</a></li>
+            <li><a href="../blog.html" class="active">Blog</a></li>
+            <li><a href="../contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div class="blog-post">
+      <div class="container">
+        <div class="blog-article">
+          <div class="blog-header">
+            <span class="blog-category">JavaScript</span>
+            <h1 class="blog-title">
+              JavaScript - Hành Trình Từ "Ghét" Đến "Yêu"
+            </h1>
+            <div class="blog-meta">
+              <span>6 tháng 10, 2025</span>
+              <span>Nguyễn Tiến Dũng</span>
+            </div>
+          </div>
+          <div class="blog-content">
+            <h2>Tại sao tôi "ghét" JavaScript lúc đầu?</h2>
+            <p>
+              Sau khi làm quen với Java - ngôn ngữ strict và rõ ràng, JavaScript
+              khiến tôi phát điên! Không cần khai báo kiểu, hoisting khó hiểu,
+              this context thay đổi lung tung. "Ngôn ngữ này tại sao lại thiết
+              kế kiểu này?" - tôi tự hỏi.
+            </p>
+
+            <h2>Những "tính năng" khiến tôi bối rối</h2>
+            <ul>
+              <li><strong>== vs ===:</strong> Tại sao "5" == 5 là true?</li>
+              <li>
+                <strong>var hoisting:</strong> Biến được dùng trước khi khai
+                báo?
+              </li>
+              <li>
+                <strong>this context:</strong> Trong function this lại là
+                window?
+              </li>
+              <li>
+                <strong>Callback hell:</strong> Pyramid of doom khiến code khó
+                đọc
+              </li>
+            </ul>
+
+            <h2>Bước ngoặt - Hiểu được "linh hoạt"</h2>
+            <p>
+              Tuần thứ 4 học JS, tôi bắt đầu thấy sức mạnh của nó. Dynamic
+              typing cho phép viết code nhanh hơn. First-class functions mở ra
+              nhiều pattern thú vị. Prototype-based inheritance linh hoạt hơn
+              class-based.
+            </p>
+
+            <h2>DOM Manipulation - Phép màu đầu tiên</h2>
+            <p>
+              Lần đầu làm webpage interactive với JavaScript, tôi cảm thấy như
+              phù thủy! Click button để thay đổi màu sắc, validate form
+              real-time, tạo animation... Web "sống" lên nhờ JavaScript!
+            </p>
+
+            <h2>ES6+ - JavaScript hiện đại</h2>
+            <p>
+              Khi ES6 ra đời, JavaScript như được tái sinh. Arrow functions,
+              template literals, destructuring, modules... Những tính năng này
+              khiến JavaScript trở nên hiện đại và dễ viết hơn nhiều.
+            </p>
+
+            <h2>Async/Await - Giải cứu khỏi Callback Hell</h2>
+            <p>
+              Promises đã tốt, nhưng async/await làm code trông như synchronous
+              dù vẫn asynchronous. Từ đây tôi bắt đầu "yêu" JavaScript thật sự!
+            </p>
+
+            <h2>Node.js - JavaScript ra khỏi browser</h2>
+            <p>
+              Khi biết JavaScript có thể làm backend với Node.js, tôi shocked!
+              Một ngôn ngữ cho cả frontend lẫn backend? Fullstack developer với
+              chỉ một ngôn ngữ? Amazing!
+            </p>
+
+            <h2>Những lesson học được từ JavaScript</h2>
+            <ul>
+              <li>
+                <strong>Flexibility có giá:</strong> Tự do nhưng dễ tạo ra bug
+              </li>
+              <li>
+                <strong>Ecosystem rộng lớn:</strong> NPM packages cho mọi thứ
+              </li>
+              <li>
+                <strong>Event-driven programming:</strong> Tư duy khác với
+                procedural
+              </li>
+              <li>
+                <strong>Testing quan trọng:</strong> Dynamic typing cần test kỹ
+              </li>
+            </ul>
+
+            <h2>Lời khuyên cho người mới</h2>
+            <ul>
+              <li>
+                <strong>Đừng so sánh với Java/C++:</strong> JavaScript khác biệt
+                hoàn toàn
+              </li>
+              <li>
+                <strong>Hiểu typeof và ép kiểu:</strong> Nền tảng của JavaScript
+              </li>
+              <li>
+                <strong>Thực hành thao tác DOM:</strong> Làm web tương tác
+              </li>
+              <li>
+                <strong>Học tính năng ES6+:</strong> Cú pháp JavaScript hiện đại
+              </li>
+              <li>
+                <strong>Xây dựng dự án:</strong> Todo app, weather app, máy tính
+              </li>
+            </ul>
+
+            <!-- Những Khó Khăn Khi Học -->
+            <div class="learning-challenges">
+              <h3>
+                <i class="bi bi-exclamation-triangle text-warning"></i> Những
+                Khó Khăn Khi Học JavaScript Cơ Bản
+              </h3>
+              <p class="challenge-intro">
+                Những khó khăn phổ biến mà người mới gặp phải khi học
+                JavaScript:
+              </p>
+
+              <div class="challenge-list">
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-1-circle text-danger"></i> Hoisting và Scope
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Biến var có thể được sử dụng trước
+                    khi khai báo, function declaration bị "hoisting" lên đầu.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Sử dụng let/const thay vì var,
+                    hiểu rõ function scope vs block scope.
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-2-circle text-danger"></i> This Context
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Giá trị của "this" thay đổi tùy
+                    theo cách gọi function, gây nhầm lẫn lớn.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Học 4 cách binding: default,
+                    implicit, explicit, arrow functions. Sử dụng bind(), call(),
+                    apply().
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-3-circle text-danger"></i> Ép Kiểu Tự Động
+                    (Type Coercion)
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> JavaScript tự động chuyển đổi kiểu
+                    dữ liệu: "5" + 3 = "53", "5" - 3 = 2
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Sử dụng === thay vì ==, hiểu rõ
+                    truthy/falsy values, explicit type conversion.
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-4-circle text-danger"></i> Closures và
+                    Memory Leaks
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Functions có thể truy cập biến ở
+                    phạm vi ngoài, gây rò rỉ bộ nhớ nếu không cẩn thận.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Hiểu cách closures hoạt động,
+                    tránh circular references, clean up event listeners.
+                  </p>
+                </div>
+
+                <div class="challenge-item">
+                  <h4>
+                    <i class="bi bi-5-circle text-danger"></i> Callback Hell
+                  </h4>
+                  <p>
+                    <strong>Vấn đề:</strong> Lồng nhiều callbacks tạo ra
+                    "pyramid of doom", code khó đọc và maintain.
+                  </p>
+                  <p>
+                    <strong>Giải pháp:</strong> Học Promises, async/await, chia
+                    nhỏ functions, sử dụng named functions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="learning-tips">
+                <h4>
+                  <i class="bi bi-lightbulb text-success"></i> Tips học hiệu
+                  quả:
+                </h4>
+                <ul>
+                  <li>
+                    <strong>Thực hành Console:</strong> Dùng browser dev tools
+                    để test code ngay lập tức
+                  </li>
+                  <li>
+                    <strong>Đọc MDN Documentation:</strong> Nguồn tài liệu chính
+                    thức và đáng tin cậy nhất
+                  </li>
+                  <li>
+                    <strong>Xây dựng projects nhỏ:</strong> Calculator, todo
+                    list, quiz app
+                  </li>
+                  <li>
+                    <strong>Debug từng dòng:</strong> Sử dụng debugger statement
+                    và breakpoints
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>Kết Luận</h2>
+            <p>
+              JavaScript từ con số không đến người hùng là hành trình đầy thú
+              vị. Từ ghét vì quá linh hoạt đến yêu vì chính sự linh hoạt đó. Giờ
+              đây JavaScript là ngôn ngữ tôi dùng nhiều nhất. Những phần kỳ lạ
+              của nó giờ đã trở thành sức hấp dẫn!
+            </p>
+            <div class="back-to-home">
+              <a href="../index.html">← Về Trang Chủ</a>
+            </div>
+          </div>
+
+          <!-- Rating Section -->
+          <div class="rating-section">
+            <div class="rating-header">
+              <h3>Đánh Giá Bài Viết</h3>
+              <p>Bài viết này có hữu ích với bạn không?</p>
+            </div>
+
+            <div class="rating-stats">
+              <div class="average-rating">
+                <div class="rating-number">4.7</div>
+                <div class="rating-stars-display">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="rating-count">dựa trên 31 đánh giá</div>
+              </div>
+
+              <div class="rating-bars">
+                <div class="rating-bar">
+                  <span class="star-label">5★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 74%"></div>
+                  </div>
+                  <span class="bar-count">23</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">4★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 19%"></div>
+                  </div>
+                  <span class="bar-count">6</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">3★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 6%"></div>
+                  </div>
+                  <span class="bar-count">2</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">2★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">1★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rate-article">
+              <h4>Đánh giá bài viết này</h4>
+              <div class="star-rating" id="userRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <button class="rate-button" id="submitRating" disabled>
+                Gửi Đánh Giá
+              </button>
+              <div
+                class="rating-message"
+                id="ratingMessage"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="comments-section">
+            <div class="comments-header">
+              <h3>
+                <i class="bi bi-chat-dots"></i>
+                Bình Luận
+                <span class="comments-count">18</span>
+              </h3>
+              <p>Chia sẻ suy nghĩ và kinh nghiệm của bạn</p>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-form">
+              <h4>Để lại bình luận</h4>
+              <form id="commentForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="commentName">Họ Tên *</label>
+                    <input type="text" id="commentName" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="commentEmail">Email *</label>
+                    <input
+                      type="email"
+                      id="commentEmail"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="commentContent">Bình Luận *</label>
+                  <textarea
+                    id="commentContent"
+                    name="content"
+                    placeholder="Chia sẻ suy nghĩ của bạn về bài viết..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-comment">
+                  Gửi Bình Luận
+                </button>
+              </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list">
+              <!-- Sample Comment 1 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">A</div>
+                    <div class="author-info">
+                      <h5>An Nguyễn</h5>
+                      <span class="comment-date">1 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Bài viết rất thực tế! Mình cũng từng "ghét" JavaScript vì
+                    những weird parts như hoisting và == vs ===. Nhưng khi hiểu
+                    được bản chất và sức mạnh của nó, JS thực sự amazing.
+                    Async/await đã thay đổi game completely!
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">14</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sample Comment 2 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">T</div>
+                    <div class="author-info">
+                      <h5>Thành Đỗ</h5>
+                      <span class="comment-date">2 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    ES6+ thực sự là game changer. Arrow functions,
+                    destructuring, template literals... làm code JavaScript
+                    trông modern hơn nhiều. Từ khi dùng async/await, mình không
+                    còn callback hell nữa 😅
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">9</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+
+                <!-- Reply -->
+                <div class="comment-reply">
+                  <div class="comment">
+                    <div class="comment-header">
+                      <div class="comment-author">
+                        <div class="author-avatar">D</div>
+                        <div class="author-info">
+                          <h5>Nguyễn Tiến Dũng</h5>
+                          <span class="comment-date">2 ngày trước</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment-content">
+                      <p>
+                        Đúng vậy! ES6+ làm JavaScript trở nên readable và
+                        maintainable hơn rất nhiều. Destructuring assignment đặc
+                        biệt hữu ích khi làm việc với objects và arrays.
+                      </p>
+                    </div>
+                    <div class="comment-actions">
+                      <button class="comment-action like-btn">
+                        <i class="bi bi-heart"></i>
+                        <span class="like-count">5</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sample Comment 3 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">P</div>
+                    <div class="author-info">
+                      <h5>Phương Lê</h5>
+                      <span class="comment-date">5 giờ trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Node.js thật sự impressive! Một ngôn ngữ cho cả frontend và
+                    backend. Ecosystem npm với hàng triệu packages. JavaScript
+                    đã đi xa từ những ngày đầu chỉ là scripting language for
+                    browsers.
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">7</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Load More Comments -->
+            <div class="load-more-comments">
+              <button class="load-more-btn">Xem Thêm Bình Luận</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Nguyễn Tiến Dũng</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Blog Rating & Comments System -->
+    <script src="../assets/js/blog-rating-comments.js"></script>
+  </body>
+</html>

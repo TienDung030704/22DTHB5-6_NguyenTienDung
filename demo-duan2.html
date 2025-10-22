@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Dự Án 2</title>
+    <link href="assets/img/favicon-32x32.png" rel="icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+      .demo-section {
+        padding: 100px 0 80px;
+        background: #f8f9fa;
+      }
+      .demo-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .demo-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+      .demo-header p {
+        font-size: 1.1rem;
+        color: #6c757d;
+        max-width: 700px;
+        margin: 0 auto 30px;
+      }
+      .demo-tags {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .demo-tags span {
+        background: #0ea5e9;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+      }
+      .demo-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .demo-item {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .demo-item:hover {
+        transform: translateY(-10px);
+      }
+      .demo-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .demo-item-caption {
+        padding: 20px;
+        text-align: center;
+      }
+      .demo-item-caption h4 {
+        font-size: 1.1rem;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+      .demo-item-caption p {
+        font-size: 0.95rem;
+        color: #6c757d;
+        margin: 0;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 30px;
+        background: #0ea5e9;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        margin-top: 40px;
+      }
+      .back-btn:hover {
+        background: #0284c7;
+        color: white;
+        transform: translateX(-5px);
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+          ><h1 class="sitename">N-T-DBlog</h1></a
+        >
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="about.html">Giới Thiệu</a></li>
+            <li><a href="resume.html">Hồ Sơ</a></li>
+            <li><a href="portfolio.html" class="active">Dự Án</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="certificate.html">Chứng Chỉ</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="demo-section">
+        <div class="container">
+          <div class="demo-header" data-aos="fade-up">
+            <h1>Dự Án 2 - Website với SASS</h1>
+            <p>
+              Dự án xây dựng website với HTML, CSS và SASS, sử dụng preprocessor
+              để code hiệu quả và dễ maintain hơn
+            </p>
+            <div class="demo-tags">
+              <span>HTML</span><span>CSS</span><span>SASS</span>
+            </div>
+          </div>
+          <div class="demo-gallery">
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="100">
+              <a href="assets/img/Demo image/duan2/duan2.png" class="glightbox"
+                ><img
+                  src="assets/img/Demo image/duan2/duan2.png"
+                  alt="Trang Chủ Dự Án 2"
+              /></a>
+              <div class="demo-item-caption">
+                <h4>Trang Chủ</h4>
+                <p>Giao diện trang chủ của dự án 2</p>
+              </div>
+            </div>
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="200">
+              <a href="assets/img/Demo image/duan2/login1.png" class="glightbox"
+                ><img
+                  src="assets/img/Demo image/duan2/login1.png"
+                  alt="Trang Đăng Nhập"
+              /></a>
+              <div class="demo-item-caption">
+                <h4>Trang Đăng Nhập</h4>
+                <p>Giao diện đăng nhập với form validation</p>
+              </div>
+            </div>
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="300">
+              <a
+                href="assets/img/Demo image/duan2/register1.png"
+                class="glightbox"
+                ><img
+                  src="assets/img/Demo image/duan2/register1.png"
+                  alt="Trang Đăng Ký"
+              /></a>
+              <div class="demo-item-caption">
+                <h4>Trang Đăng Ký</h4>
+                <p>Giao diện đăng ký tài khoản mới</p>
+              </div>
+            </div>
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="400">
+              <a href="assets/img/Demo image/duan2/page2.png" class="glightbox"
+                ><img
+                  src="assets/img/Demo image/duan2/page2.png"
+                  alt="Màn Hình Chức Năng 1"
+              /></a>
+              <div class="demo-item-caption">
+                <h4>Màn Hình Chức Năng 1</h4>
+                <p>Giao diện chức năng chính của hệ thống</p>
+              </div>
+            </div>
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="500">
+              <a href="assets/img/Demo image/duan2/page3.png" class="glightbox"
+                ><img
+                  src="assets/img/Demo image/duan2/page3.png"
+                  alt="Màn Hình Chức Năng 2"
+              /></a>
+              <div class="demo-item-caption">
+                <h4>Màn Hình Chức Năng 2</h4>
+                <p>Giao diện hiển thị danh sách dữ liệu</p>
+              </div>
+            </div>
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="600">
+              <a href="assets/img/Demo image/duan2/page4.png" class="glightbox"
+                ><img
+                  src="assets/img/Demo image/duan2/page4.png"
+                  alt="Màn Hình Chức Năng 3"
+              /></a>
+              <div class="demo-item-caption">
+                <h4>Màn Hình Chức Năng 3</h4>
+                <p>Giao diện chi tiết và quản lý</p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center" data-aos="fade-up">
+            <a href="portfolio.html" class="back-btn"
+              ><i class="bi bi-arrow-left"></i>Quay Lại Portfolio</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+    <div id="preloader"></div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

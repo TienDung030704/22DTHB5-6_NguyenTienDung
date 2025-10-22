@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo N-T-DBlog - Blog Cá Nhân</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon-32x32.png" rel="icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      .demo-section {
+        padding: 100px 0 80px;
+        background: #f8f9fa;
+      }
+
+      .demo-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .demo-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+
+      .demo-header p {
+        font-size: 1.1rem;
+        color: #6c757d;
+        max-width: 700px;
+        margin: 0 auto 30px;
+      }
+
+      .demo-tags {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .demo-tags span {
+        background: #0ea5e9;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+      }
+
+      .demo-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .demo-item {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .demo-item:hover {
+        transform: translateY(-10px);
+      }
+
+      .demo-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .demo-item-caption {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .demo-item-caption h4 {
+        font-size: 1.1rem;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      .demo-item-caption p {
+        font-size: 0.95rem;
+        color: #6c757d;
+        margin: 0;
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 30px;
+        background: #0ea5e9;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        margin-top: 40px;
+      }
+
+      .back-btn:hover {
+        background: #0284c7;
+        color: white;
+        transform: translateX(-5px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <h1 class="sitename">N-T-DBlog</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="about.html">Giới Thiệu</a></li>
+            <li><a href="resume.html">Hồ Sơ</a></li>
+            <li><a href="portfolio.html" class="active">Dự Án</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="certificate.html">Chứng Chỉ</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="demo-section">
+        <div class="container">
+          <div class="demo-header" data-aos="fade-up">
+            <h1>N-T-DBlog - Blog Cá Nhân</h1>
+            <p>
+              Blog cá nhân chia sẻ kiến thức lập trình Java và JavaScript với
+              giao diện hiện đại, responsive và tối ưu hiệu suất. Đây là dự án
+              mà tôi đã dành rất nhiều tâm huyết để xây dựng, từ việc thiết kế
+              giao diện, viết code, đến tối ưu hiệu suất và trải nghiệm người
+              dùng.
+            </p>
+            <p style="margin-top: 15px; font-style: italic; color: #555">
+              💡 <strong>Hành trình học tập:</strong> Từ những dòng code
+              HTML/CSS đầu tiên, đến việc làm chủ JavaScript, Bootstrap và các
+              công nghệ web hiện đại. Mỗi dự án là một bài học quý giá, mỗi lỗi
+              là cơ hội để trưởng thành. Tôi không ngừng học hỏi, thực hành và
+              hoàn thiện bản thân mỗi ngày.
+            </p>
+            <div class="demo-tags">
+              <span>HTML/CSS</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="demo-gallery">
+            <!-- Demo Image 1 - webblog.png -->
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="100">
+              <a
+                href="assets/img/Demo image/webblog/webblog.png"
+                class="glightbox"
+              >
+                <img
+                  src="assets/img/Demo image/webblog/webblog.png"
+                  alt="Trang Chủ"
+                />
+              </a>
+              <div class="demo-item-caption">
+                <h4>Trang Chủ - Homepage</h4>
+                <p>
+                  Xin chào, tôi là Nguyễn Tiến Dũng - Lập trình viên Full-Stack
+                  Developer
+                </p>
+              </div>
+            </div>
+
+            <!-- Demo Image 2 - webblog2.png -->
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="200">
+              <a
+                href="assets/img/Demo image/webblog/webblog2.png"
+                class="glightbox"
+              >
+                <img
+                  src="assets/img/Demo image/webblog/webblog2.png"
+                  alt="Trang Giới Thiệu"
+                />
+              </a>
+              <div class="demo-item-caption">
+                <h4>Trang Giới Thiệu - About Me</h4>
+                <p>
+                  Giới thiệu bản thân, hồ sơ nghề nghiệp và kỹ năng chuyên môn
+                </p>
+              </div>
+            </div>
+
+            <!-- Demo Image 3 - webblog3.png -->
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="300">
+              <a
+                href="assets/img/Demo image/webblog/webblog3.png"
+                class="glightbox"
+              >
+                <img
+                  src="assets/img/Demo image/webblog/webblog3.png"
+                  alt="Chi Tiết Bài Viết"
+                />
+              </a>
+              <div class="demo-item-caption">
+                <h4>Trang CV</h4>
+                <p>Trang chi tiết bài viết với typography đẹp và dễ đọc</p>
+              </div>
+            </div>
+
+            <!-- Demo Image 4 - webblog4.png -->
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="400">
+              <a
+                href="assets/img/Demo image/webblog/webblog4.png"
+                class="glightbox"
+              >
+                <img
+                  src="assets/img/Demo image/webblog/webblog4.png"
+                  alt="Trang Portfolio"
+                />
+              </a>
+              <div class="demo-item-caption">
+                <h4>Trang Dự Án & Kỹ Năng</h4>
+                <p>Showcase các dự án đã thực hiện với filter categories</p>
+              </div>
+            </div>
+
+            <!-- Demo Image 5 - webblog5.png -->
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="500">
+              <a
+                href="assets/img/Demo image/webblog/webblog5.png"
+                class="glightbox"
+              >
+                <img
+                  src="assets/img/Demo image/webblog/webblog5.png"
+                  alt="Trang Blog Lập Trình"
+                />
+              </a>
+              <div class="demo-item-caption">
+                <h4>Blog Lập Trình</h4>
+                <p>Danh sách bài viết về Java, JavaScript và Tips lập trình</p>
+              </div>
+            </div>
+
+            <!-- Demo Image 6 - webblog6.png -->
+            <div class="demo-item" data-aos="fade-up" data-aos-delay="600">
+              <a
+                href="assets/img/Demo image/webblog/webblog6.png"
+                class="glightbox"
+              >
+                <img
+                  src="assets/img/Demo image/webblog/webblog6.png"
+                  alt="Trang Liên Hệ"
+                />
+              </a>
+              <div class="demo-item-caption">
+                <h4>Chứng Chỉ & Giải Thưởng</h4>
+                <p>Hiển thị các chứng chỉ, thành tích và hành trình học tập</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center" data-aos="fade-up">
+            <a href="portfolio.html" class="back-btn">
+              <i class="bi bi-arrow-left"></i>
+              Quay Lại Portfolio
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
