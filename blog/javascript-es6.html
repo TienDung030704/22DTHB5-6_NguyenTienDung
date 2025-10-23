@@ -181,6 +181,256 @@
               <li><strong>Code reviews:</strong> Hiện đại hóa mã cũ</li>
             </ul>
 
+            <!-- Những Điều Tâm Đắc Nhất -->
+            <div class="personal-insights" style="margin: 40px 0">
+              <h2
+                style="color: #333; padding-bottom: 15px; margin-bottom: 25px"
+              >
+                <i class="bi bi-heart-fill" style="color: #ff6b9d"></i> Những
+                Điều Tâm Đắc Nhất Về JavaScript ES6+
+              </h2>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-star-fill" style="color: #ffd700"></i> ⭐ 1.
+                  Arrow Functions - Không Chỉ Là Syntax Sugar!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Điều tâm đắc:</strong> Arrow function không chỉ ngắn
+                  gọn hơn mà còn FIX vấn đề
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >this</code
+                  >
+                  binding! Không cần
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >.bind(this)</code
+                  >
+                  hay
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >self = this</code
+                  >
+                  nữa. Arrow function lấy
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >this</code
+                  >
+                  từ lexical scope, giải quyết 90% bug về this!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Đây là feature giúp tôi viết
+                  code sạch hơn và ít bug hơn ngay lập tức!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-lightning-fill" style="color: #ffd700"></i> ⚡
+                  2. Destructuring - Giảm 50% Dòng Code!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Tiết kiệm thời gian:</strong> Từ 5 dòng code để lấy
+                  property từ object xuống còn 1 dòng! Destructuring với default
+                  values, nested destructuring, rest operator... Mỗi khi
+                  refactor code cũ sang ES6, file size giảm đáng kể chỉ nhờ
+                  destructuring!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Code ngắn hơn, dễ đọc hơn,
+                  và ít lỗi hơn - triple win!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-shield-fill-check" style="color: #ffd700"></i>
+                  🛡️ 3. Const/Let - Tạm Biệt Var Hell!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Block scope cuối cùng!</strong> Không còn hoisting lạ
+                  lùng, không còn var leaking ra ngoài loop.
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >const</code
+                  >
+                  by default giúp code predictable hơn,
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >let</code
+                  >
+                  khi cần reassign. Đơn giản và hiệu quả!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Giảm 80% bug liên quan đến
+                  scope - đáng giá từng giây học nó!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-hourglass-split" style="color: #ffd700"></i>
+                  ⏳ 4. Template Literals - String Interpolation Done Right!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Tạm biệt string concatenation!</strong> Template
+                  literals với
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >${}</code
+                  >
+                  không chỉ dễ đọc mà còn hỗ trợ multi-line, expression
+                  evaluation. Tagged templates mở ra cả một thế giới mới cho
+                  string processing!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Feature đơn giản nhưng cải
+                  thiện quality of life hàng ngày!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-emoji-smile-fill" style="color: #ffd700"></i>
+                  😊 5. Spread Operator - Magic Three Dots!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Ba chấm thần thánh:</strong> Clone array/object, merge
+                  data, pass arguments... tất cả chỉ với
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >...</code
+                  >! Immutable programming trở nên dễ dàng, code functional
+                  style trở nên elegant. Spread operator là MVP của ES6!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Một operator nhỏ nhưng
+                  powerful, dùng mỗi ngày không chán!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff3cd;
+                  padding: 25px;
+                  border-radius: 10px;
+                  text-align: center;
+                  margin-top: 25px;
+                  border: 2px solid #ffc107;
+                "
+              >
+                <h3 style="color: #856404; margin-bottom: 15px">
+                  <i class="bi bi-trophy-fill"></i> Bài Học Lớn Nhất
+                </h3>
+                <p
+                  style="
+                    font-size: 18px;
+                    line-height: 1.8;
+                    font-weight: 500;
+                    color: #333;
+                  "
+                >
+                  <strong>ES6+ không phải để "flex", mà để CODE TỐT HƠN!</strong
+                  ><br />
+                  Mỗi feature đều giải quyết vấn đề thực tế. Học ES6 không phải
+                  học syntax mới,<br />
+                  mà là học cách viết JavaScript modern, maintainable và less
+                  error-prone!
+                </p>
+                <p
+                  style="
+                    margin-top: 20px;
+                    font-style: italic;
+                    color: #856404;
+                    font-size: 16px;
+                  "
+                >
+                  💡 <strong>Lời khuyên:</strong> Đừng học tất cả một lúc! Mỗi
+                  tuần học 2-3 features,<br />
+                  áp dụng vào dự án thực tế, và bạn sẽ master ES6 một cách tự
+                  nhiên!
+                </p>
+              </div>
+            </div>
+
             <!-- Những Khó Khăn Khi Học -->
             <div class="learning-challenges">
               <h3>

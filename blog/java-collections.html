@@ -142,6 +142,93 @@
               <li><strong>TreeMap:</strong> Key-value + sorted by key</li>
             </ul>
 
+            <!-- Những Điều Tâm Đắc Nhất -->
+            <div class="personal-insights" style="margin: 40px 0;">
+              <h2 style="color: #333; padding-bottom: 15px; margin-bottom: 25px;">
+                <i class="bi bi-heart-fill" style="color: #ff6b9d;"></i> Những Điều Tâm Đắc Nhất Về Java Collections
+              </h2>
+              
+              <div style="background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #ffd700; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h3 style="color: #333; margin-bottom: 15px;">
+                  <i class="bi bi-star-fill" style="color: #ffd700;"></i> ⭐ 1. HashMap - O(1) Lookup Magic!
+                </h3>
+                <p style="line-height: 1.8; color: #555;">
+                  <strong>Điều tâm đắc:</strong> HashMap với O(1) lookup là game changer! Từ O(n) linear search xuống O(1) - performance tăng exponentially. 
+                  Hiểu hash collision, load factor, capacity là key để optimize performance. HashMap là must-know cho mọi Java developer!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404;">
+                  <strong>Tại sao tâm đắc:</strong> Data structure đơn giản nhưng impact huge trong real applications!
+                </p>
+              </div>
+
+              <div style="background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #ffd700; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h3 style="color: #333; margin-bottom: 15px;">
+                  <i class="bi bi-lightning-fill" style="color: #ffd700;"></i> ⚡ 2. ArrayList vs LinkedList - Know When To Use!
+                </h3>
+                <p style="line-height: 1.8; color: #555;">
+                  <strong>Performance matters:</strong> ArrayList: fast random access, slow insert/delete. LinkedList: slow random access, fast insert/delete. 
+                  90% cases dùng ArrayList! LinkedList chỉ khi thường xuyên insert/delete ở đầu/giữa list. Hiểu Big O = chọn đúng structure!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404;">
+                  <strong>Tại sao tâm đắc:</strong> Right tool for right job - foundation của performance optimization!
+                </p>
+              </div>
+
+              <div style="background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #ffd700; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h3 style="color: #333; margin-bottom: 15px;">
+                  <i class="bi bi-shield-fill-check" style="color: #ffd700;"></i> 🛡️ 3. Concurrent Collections - Thread-Safe Without Pain!
+                </h3>
+                <p style="line-height: 1.8; color: #555;">
+                  <strong>Multithreading made easy:</strong> ConcurrentHashMap, CopyOnWriteArrayList... thread-safe mà không cần manual synchronization! 
+                  Performance tốt hơn synchronized collections. Đây là lý do Java thống trị enterprise - concurrent support excellent!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404;">
+                  <strong>Tại sao tâm đắc:</strong> Thread-safety built-in = less bugs, more productivity!
+                </p>
+              </div>
+
+              <div style="background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #ffd700; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h3 style="color: #333; margin-bottom: 15px;">
+                  <i class="bi bi-hourglass-split" style="color: #ffd700;"></i> ⏳ 4. Stream API - Functional Programming in Java!
+                </h3>
+                <p style="line-height: 1.8; color: #555;">
+                  <strong>Java 8 revolution:</strong> Collections + Stream API = powerful combination! Filter, map, reduce... declarative style. 
+                  Parallel streams cho multi-core performance. Code readable, concise, và powerful!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404;">
+                  <strong>Tại sao tâm đắc:</strong> Functional programming style trong Java - best of both worlds!
+                </p>
+              </div>
+
+              <div style="background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #ffd700; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h3 style="color: #333; margin-bottom: 15px;">
+                  <i class="bi bi-emoji-smile-fill" style="color: #ffd700;"></i> 😊 5. Immutable Collections - Safety First!
+                </h3>
+                <p style="line-height: 1.8; color: #555;">
+                  <strong>Defensive programming:</strong> List.of(), Set.of(), Map.of() tạo immutable collections! Không thể modify = thread-safe by default. 
+                  Suitable cho constants, config, shared data. Immutability = predictability = less bugs!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404;">
+                  <strong>Tại sao tâm đắc:</strong> Immutability principle áp dụng practical - code safer instantly!
+                </p>
+              </div>
+
+              <div style="background: #fff3cd; padding: 25px; border-radius: 10px; text-align: center; margin-top: 25px; border: 2px solid #ffc107;">
+                <h3 style="color: #856404; margin-bottom: 15px;">
+                  <i class="bi bi-trophy-fill"></i> Bài Học Lớn Nhất
+                </h3>
+                <p style="font-size: 18px; line-height: 1.8; font-weight: 500; color: #333;">
+                  <strong>Collections không phải về memorization, mà về UNDERSTANDING!</strong><br/>
+                  Hiểu internal working, time complexity, use cases... thì sẽ chọn đúng collection cho đúng job.<br/>
+                  Master Collections = write efficient, scalable Java code!
+                </p>
+                <p style="margin-top: 20px; font-style: italic; color: #856404; font-size: 16px;">
+                  💡 <strong>Lời khuyên:</strong> Implement your own ArrayList, HashMap từ scratch!<br/>
+                  Understand HOW they work = know WHEN to use them!
+                </p>
+              </div>
+            </div>
+
             <!-- Những Khó Khăn Khi Học -->
             <div class="learning-challenges">
               <h3><i class="bi bi-exclamation-triangle text-warning"></i> Những Khó Khăn Khi Học Java Collections</h3>

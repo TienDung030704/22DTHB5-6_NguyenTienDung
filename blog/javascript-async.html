@@ -172,6 +172,242 @@
               <li><strong>Async iterators:</strong> Xử lý stream</li>
             </ul>
 
+            <!-- Những Điều Tâm Đắc Nhất -->
+            <div class="personal-insights" style="margin: 40px 0">
+              <h2
+                style="color: #333; padding-bottom: 15px; margin-bottom: 25px"
+              >
+                <i class="bi bi-heart-fill" style="color: #ff6b9d"></i> Những
+                Điều Tâm Đắc Nhất Về JavaScript Async
+              </h2>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-star-fill" style="color: #ffd700"></i> ⭐ 1.
+                  Async/Await Không Phải Ma Thuật - Nó Vẫn Là Promise!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Điều tâm đắc nhất:</strong>
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >async/await</code
+                  >
+                  chỉ là "syntactic sugar" của
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >Promise</code
+                  >. Ban đầu tôi cứ nghĩ chúng là hai thứ khác nhau hoàn toàn!
+                  Nhưng thực chất
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >async function</code
+                  >
+                  luôn return một Promise, và
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >await</code
+                  >
+                  chỉ là cách viết khác của
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >.then()</code
+                  >.
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Vì nó giúp tôi không còn
+                  "sợ" async nữa. Tôi hiểu bản chất và có thể kiểm soát nó!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-lightning-fill" style="color: #ffd700"></i> ⚡
+                  2. Promise.all() vs Await Trong Loop - Performance Game
+                  Changer!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Bài học "đắt giá":</strong> Một dự án của tôi tăng tốc
+                  từ <strong style="color: #dc3545">15 giây</strong> xuống còn
+                  <strong style="color: #28a745">3 giây</strong> chỉ bằng cách
+                  đổi từ await trong loop sang Promise.all()! Await trong loop
+                  chạy tuần tự, còn Promise.all() chạy song song.
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Performance tăng gấp 5 lần
+                  chỉ bằng 1 dòng code! Đây là lúc tôi cảm nhận được sức mạnh
+                  thật sự của async.
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-shield-fill-check" style="color: #ffd700"></i>
+                  🛡️ 3. Try/Catch Không Bắt Được Promise Rejection!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Lỗi debug 3 tiếng:</strong> Try/catch KHÔNG BẮT ĐƯỢC
+                  lỗi nếu không có
+                  <code
+                    style="
+                      background: #f5f5f5;
+                      padding: 2px 8px;
+                      border-radius: 4px;
+                    "
+                    >await</code
+                  >! Promise rejection xảy ra bất đồng bộ, nằm ngoài try/catch
+                  block. Phải có await thì try/catch mới hoạt động.
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Bài học này dạy tôi phải
+                  HIỂU cách Promise hoạt động, không thể "đoán mò" được!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-hourglass-split" style="color: #ffd700"></i>
+                  ⏳ 4. Event Loop - Trái Tim Của JavaScript
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Khoảnh khắc "AHA!":</strong> Hiểu Event Loop là hiểu
+                  JavaScript! Call Stack xử lý code đồng bộ, Callback Queue chứa
+                  setTimeout/DOM events (Macro-tasks), và Microtask Queue chứa
+                  Promises (ưu tiên cao hơn!). Promise sẽ chạy trước setTimeout
+                  dù setTimeout có delay 0!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Hiểu Event Loop = Hiểu
+                  JavaScript. Đây là nền tảng để trở thành developer giỏi!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-emoji-smile-fill" style="color: #ffd700"></i>
+                  😊 5. AbortController - Tính Năng "Ẩn" Tuyệt Vời!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Giải pháp thực tế:</strong> Khi user click search liên
+                  tục tạo ra 10 requests cùng lúc, AbortController giúp hủy
+                  request cũ để chỉ xử lý request mới nhất. Ngăn race condition
+                  và tiết kiệm bandwidth!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Ít người biết tính năng này,
+                  nhưng nó giải quyết vấn đề thực tế mà tôi gặp hàng ngày!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff3cd;
+                  padding: 25px;
+                  border-radius: 10px;
+                  text-align: center;
+                  margin-top: 25px;
+                  border: 2px solid #ffc107;
+                "
+              >
+                <h3 style="color: #856404; margin-bottom: 15px">
+                  <i class="bi bi-trophy-fill"></i> Bài Học Lớn Nhất
+                </h3>
+                <p
+                  style="
+                    font-size: 18px;
+                    line-height: 1.8;
+                    font-weight: 500;
+                    color: #333;
+                  "
+                >
+                  <strong
+                    >Async không khó, khó ở chỗ không hiểu BẢN CHẤT!</strong
+                  ><br />
+                  Khi bạn hiểu Event Loop, Promise và Async/Await thật sự hoạt
+                  động như thế nào,<br />
+                  mọi thứ trở nên đơn giản và logic. Đừng chỉ học cú pháp - hãy
+                  hiểu WHY và HOW!
+                </p>
+                <p
+                  style="
+                    margin-top: 20px;
+                    font-style: italic;
+                    color: #856404;
+                    font-size: 16px;
+                  "
+                >
+                  💡 <strong>Lời khuyên:</strong> Hãy dành thời gian vẽ sơ đồ
+                  Event Loop, thử nghiệm với các timing khác nhau,<br />
+                  và quan trọng nhất - THẤT BẠI và DEBUG! Đó là cách tốt nhất để
+                  học async.
+                </p>
+              </div>
+            </div>
+
             <!-- Những Khó Khăn Khi Học -->
             <div class="learning-challenges">
               <h3>

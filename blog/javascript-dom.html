@@ -166,6 +166,189 @@
               <li><strong>Dùng CSS transforms:</strong> Thay vì top/left</li>
             </ul>
 
+            <!-- Những Điều Tâm Đắc Nhất -->
+            <div class="personal-insights" style="margin: 40px 0">
+              <h2
+                style="color: #333; padding-bottom: 15px; margin-bottom: 25px"
+              >
+                <i class="bi bi-heart-fill" style="color: #ff6b9d"></i> Những
+                Điều Tâm Đắc Nhất Về JavaScript DOM
+              </h2>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-star-fill" style="color: #ffd700"></i> ⭐ 1.
+                  Event Delegation - Pattern Thay Đổi Cuộc Chơi!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Điều tâm đắc:</strong> Thay vì 1000 event listeners,
+                  chỉ cần 1 listener trên parent! Event bubbling cho phép handle
+                  events từ children. Performance tăng vọt, memory giảm, và
+                  dynamic elements tự động có events - quá hoàn hảo!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Một pattern đơn giản nhưng
+                  giải quyết vấn đề performance nghiêm trọng!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-lightning-fill" style="color: #ffd700"></i> ⚡
+                  2. DocumentFragment - Secret Weapon Cho Performance!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Tăng tốc 10x:</strong> Thay vì appendChild 1000 lần
+                  (1000 reflows), dùng DocumentFragment để batch update! Chỉ 1
+                  reflow duy nhất. Khi render danh sách lớn, DocumentFragment là
+                  must-have!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Ít người biết nhưng impact
+                  cực lớn - đây là sự khác biệt giữa junior và senior!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-shield-fill-check" style="color: #ffd700"></i>
+                  🛡️ 3. InnerHTML vs TextContent - Security Matters!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Bài học XSS:</strong> innerHTML có thể execute script
+                  - nguy hiểm! textContent chỉ insert text thuần, an toàn hơn.
+                  Nếu cần HTML, dùng DOMPurify để sanitize. Bảo mật không phải
+                  optional!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Một lỗi nhỏ có thể dẫn đến
+                  security breach lớn - safety first!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-hourglass-split" style="color: #ffd700"></i>
+                  ⏳ 4. RequestAnimationFrame - Smooth Animations!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>60 FPS mượt mà:</strong> Dùng setInterval cho
+                  animation? Sai lầm! requestAnimationFrame sync với browser
+                  refresh rate (60fps), tự động pause khi tab inactive - tiết
+                  kiệm pin và CPU!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Animation mượt mà = UX tốt =
+                  happy users!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 10px;
+                  margin-bottom: 20px;
+                  border: 1px solid #ffd700;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                "
+              >
+                <h3 style="color: #333; margin-bottom: 15px">
+                  <i class="bi bi-emoji-smile-fill" style="color: #ffd700"></i>
+                  😊 5. Event.preventDefault() - Control Freak!
+                </h3>
+                <p style="line-height: 1.8; color: #555">
+                  <strong>Kiểm soát hoàn toàn:</strong> Form submit reload page?
+                  preventDefault()! Link navigate away? preventDefault()!
+                  Right-click menu? preventDefault()! Kiểm soát mọi default
+                  behavior để tạo custom UX!
+                </p>
+                <p style="margin-top: 15px; font-style: italic; color: #856404">
+                  <strong>Tại sao tâm đắc:</strong> Method nhỏ nhưng powerful -
+                  foundation của mọi custom interaction!
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #fff3cd;
+                  padding: 25px;
+                  border-radius: 10px;
+                  text-align: center;
+                  margin-top: 25px;
+                  border: 2px solid #ffc107;
+                "
+              >
+                <h3 style="color: #856404; margin-bottom: 15px">
+                  <i class="bi bi-trophy-fill"></i> Bài Học Lớn Nhất
+                </h3>
+                <p
+                  style="
+                    font-size: 18px;
+                    line-height: 1.8;
+                    font-weight: 500;
+                    color: #333;
+                  "
+                >
+                  <strong
+                    >DOM không chỉ là API, mà là CẦU NỐI giữa Code và
+                    User!</strong
+                  ><br />
+                  Master DOM = tạo được mọi interaction bạn tưởng tượng.<br />
+                  Performance, Security, UX - tất cả đều bắt đầu từ cách bạn
+                  manipulate DOM!
+                </p>
+                <p
+                  style="
+                    margin-top: 20px;
+                    font-style: italic;
+                    color: #856404;
+                    font-size: 16px;
+                  "
+                >
+                  💡 <strong>Lời khuyên:</strong> Build nhiều interactive
+                  projects! Todo app, Image gallery, Game...<br />
+                  Practice makes perfect - DOM mastery chỉ đến qua thực hành!
+                </p>
+              </div>
+            </div>
+
             <!-- Những Khó Khăn Khi Học -->
             <div class="learning-challenges">
               <h3>
