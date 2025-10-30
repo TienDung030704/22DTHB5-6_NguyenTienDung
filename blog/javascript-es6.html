@@ -57,308 +57,152 @@
             </div>
           </div>
           <div class="blog-content">
-            <h2>Tại sao ES6 khiến tôi "WOW" ngay lần đầu tiên?</h2>
+            <h2>Lần đầu gặp ES6 - "Éo éo JS này sao lạ vậy?"</h2>
             <p>
-              Tôi còn nhớ rất rõ ngày đầu tiên đọc về ES6 (ECMAScript 2015). Lúc
-              đó đang học JavaScript ES5 cơ bản, đột nhiên thấy syntax kiểu
-              <code>const name = 'Dũng';</code> và
-              <code>let age = 21;</code> thay vì <code>var</code>. Rồi arrow
-              functions với <code>=></code>, template literals với dấu
-              backtick... "JavaScript này sao lạ vậy?" - Đó là cảm nghĩ đầu tiên
-              của tôi.
+              Hồi đó mình đang học JS cơ bản với var, function bla bla, rồi đột
+              nhiên thấy anh bạn cùng lớp viết
+              <code>const name = 'Dũng'</code> và <code>let age = 21</code>.
+              "Cái quái gì vậy?" - đó là reaction đầu tiên của mình 😅
             </p>
             <p>
-              Nhưng chỉ sau vài tuần thực hành, tôi hiểu tại sao ES6 được gọi là
-              "cuộc cách mạng". Nó không chỉ là thêm vài tính năng mới, mà thực
-              sự <strong>thay đổi cách chúng ta viết JavaScript</strong>. Code
-              ngắn gọn hơn, dễ đọc hơn, và quan trọng nhất - ít bug hơn!
+              Lúc đầu nghĩ là cú pháp lạ lùng gì đó, nhưng sau khi research và
+              thực hành vài tuần thì hiểu tại sao ES6 được gọi là "game
+              changer". Code ngắn gọn hơn, ít bug hơn, và quan trọng nhất là đọc
+              dễ hiểu hơn nhiều!
             </p>
 
-            <h2>Arrow Functions - Tính năng đầu tiên tôi "nghiện"</h2>
+            <h2>Arrow Functions - Cái này nghiện thật!</h2>
             <p>
-              Trước ES6, tôi phải viết hàm dài dòng với từ khóa
-              <code>function</code>. Với ES6, mọi thứ gọn gàng đến không ngờ với
-              arrow functions sử dụng cú pháp <code>=></code>. Đẹp không? Nhưng
-              arrow function không chỉ là về syntax đẹp. Điều tôi thích nhất là
-              <strong>lexical this binding</strong> - nó tự động bind
-              <code>this</code> từ scope bên ngoài! Không còn phải
-              <code>const self = this;</code> hay <code>.bind(this)</code> nữa.
+              Trước giờ viết function dài dòng kinh khủng, giờ chỉ cần
+              <code>=></code>
+              là xong. Ban đầu cứ tưởng chỉ là để cho ngắn thôi, ai ngờ còn có
+              trick về
+              <code>this</code> binding nữa - không còn phải
+              <code>const self = this</code> hay <code>.bind(this)</code> đau
+              đầu nữa.
             </p>
             <p>
-              Lúc đầu tôi dùng arrow function cho mọi thứ, nhưng sau này mới học
-              được khi nào thì
-              <strong>KHÔNG nên dùng</strong>: methods trong object,
-              constructors, hay khi cần <code>arguments</code> object. Hiểu được
-              tradeoffs là một phần quan trọng của việc master ES6!
+              Nhưng mà cẩn thận đừng dùng bừa! Mình đã từng dùng arrow function
+              làm method trong object rồi debug hoài không ra 😂 Học được bài
+              học: không phải lúc nào cũng dùng được đâu nhé!
             </p>
 
-            <h2>Template Literals - Goodbye string concatenation địa ngục!</h2>
+            <h2>Template Literals - Tạm biệt nối chuỗi kinh hoàng</h2>
             <p>
-              Ai mà chưa từng đau đầu với việc nối chuỗi với dấu <code>+</code>?
-              Quên dấu space, quên dấu ngoặc, nhầm dấu + với dấu ,... Bug nhiều
-              vô kể! ES6 template literals với backtick (<code>`</code>) là món
-              quà cứu rỗi với cú pháp <code>${}</code> để nhúng biểu thức vào
-              chuỗi.
+              Ai chưa từng đau đầu với việc nối chuỗi bằng dấu + thì chưa phải
+              dev đấy! Quên space, quên dấu ngoặc, nhầm + với ,... Bug nhiều vô
+              kể. Template literals với backtick và <code>${}</code> là cứu cánh
+              thật sự.
             </p>
             <p>
-              Đơn giản, rõ ràng, và đẹp! Nhưng điều tôi yêu thích nhất là
-              <strong>multi-line strings</strong> - không cần dùng
-              <code>\n</code> hoặc array join nữa. Tôi dùng template literals
-              hàng ngày để tạo HTML dynamic, format messages, thậm chí cả trong
-              React JSX!
+              Đặc biệt cái multi-line string, trước giờ phải
+              <code>\n</code> hoặc join array phức tạp, giờ thì gõ thẳng xuống
+              dòng là được. Ngon lành cành đào!
             </p>
 
-            <h2>Destructuring - "Giải phóng" data một cách elegant</h2>
+            <h2>Destructuring - "Bóc tách" data kiểu pro</h2>
             <p>
-              Destructuring là tính năng khiến tôi cảm thấy JavaScript giống
-              Python và Ruby hơn. Thay vì phải viết dài dòng để lấy từng
-              property từ object, giờ chỉ cần một dòng với cú pháp
-              <code>const { name, age, city } = user;</code> là xong!
+              Cái này thì tuyệt vời! Thay vì viết <code>user.name</code>,
+              <code>user.age</code> một cách dài dòng, giờ chỉ cần
+              <code>const { name, age } = user</code> là xong. Array thì
+              <code>const [first, second] = arr</code>.
             </p>
             <p>
-              Array destructuring cũng tuyệt vời không kém với cú pháp
-              <code>const [first, second, ...rest] = array;</code> Tôi hay dùng
-              destructuring trong function parameters để code dễ đọc hơn, kết
-              hợp với default values thì không còn phải check
-              <code>if (value === undefined)</code> nữa!
-            </p>
-            <p>
-              <strong>Default values</strong> trong destructuring cũng là một
-              lifesaver. Không còn phải check
-              <code>if (value === undefined)</code> nữa!
+              Mình hay dùng destructuring trong function parameters, nhất là khi
+              có nhiều tham số. Code nhìn clean hơn nhiều và có thể set default
+              value luôn!
             </p>
 
-            <h2>Let & Const - Cuối cùng thì block scope đã đến!</h2>
+            <h2>Let & Const - Goodbye var!</h2>
             <p>
-              <code>var</code> với hoisting và function scope đã gây cho tôi
-              biết bao bug khó hiểu. Đặc biệt là trong vòng lặp với
-              <code>setTimeout</code> - giá trị biến không như mong đợi. Với
-              <code>let</code>, vấn đề này được giải quyết hoàn toàn nhờ block
-              scope!
+              <code>var</code> với cái hoisting và function scope đã làm mình
+              debug cả đêm không biết bao nhiêu lần. Nhất là trong loop với
+              setTimeout - cái bug kinh điển mà ai học JS cũng gặp.
             </p>
             <p>
-              Nguyên tắc tôi theo là:
-              <strong
-                >Luôn dùng <code>const</code> trước, chỉ dùng
-                <code>let</code> khi cần reassign</strong
-              >. <code>var</code>? Quên nó đi! Const không có nghĩa là immutable
-              hoàn toàn (object/array vẫn modify được), nhưng nó ngăn không cho
-              reassign variable - đủ để tránh nhiều lỗi rồi.
+              Giờ mình luôn dùng <code>const</code> trước, chỉ dùng
+              <code>let</code> khi thực sự cần reassign. <code>var</code>? Bye
+              bye luôn! 👋
             </p>
 
-            <h2>Spread & Rest Operators - Ba dấu chấm kỳ diệu (...)</h2>
+            <h2>Spread Operator (...) - Ba chấm ma thuật</h2>
             <p>
-              <code>...</code> (spread/rest operator) có lẽ là operator đa năng
-              nhất mà tôi biết. Cùng một syntax nhưng tùy context mà có ý nghĩa
-              khác nhau!
+              Ba dấu chấm này có lẽ là cái mình dùng nhiều nhất. Clone array:
+              <code>[...arr]</code>, merge array, clone object:
+              <code>{...obj}</code>. Trong React thì dùng để update state
+              immutably nữa.
             </p>
             <p>
-              <strong>Spread operator</strong> giúp "trải" array/object ra -
-              dùng để clone array với <code>[...arr]</code>, merge arrays, clone
-              object với <code>{...obj}</code>, và merge objects (thuộc tính sau
-              sẽ override trước). <strong>Rest parameters</strong> thì ngược lại
-              - "gom" arguments lại thành array với
-              <code>function(...numbers)</code>.
-            </p>
-            <p>
-              Tôi dùng spread operator mỗi ngày, đặc biệt khi làm React để
-              update state immutably. Nó là một trong những tính năng tôi không
-              thể sống thiếu!
+              Rest parameters cũng xịn, nhất là khi làm function nhận nhiều
+              arguments không biết trước. Cùng syntax nhưng khác context là khác
+              ý nghĩa luôn.
             </p>
 
-            <h2>Classes - Syntax sugar ngọt ngào cho OOP</h2>
+            <h2>Classes - Syntax đẹp hơn cho OOP</h2>
             <p>
-              Tôi biết class trong JavaScript chỉ là "syntactic sugar" cho
-              prototype-based inheritance. Nhưng thực sự, nó làm code dễ đọc và
-              dễ hiểu hơn nhiều, đặc biệt với người từ Java/C++ sang. Có
-              <code>constructor</code> rõ ràng, methods gọn gàng, kế thừa với
-              <code>extends</code> và <code>super</code>
-              thay vì phải làm việc với prototype chain phức tạp.
+              Biết là chỉ là syntactic sugar cho prototype thôi, nhưng đọc dễ
+              hiểu hơn nhiều! Có <code>constructor</code>, <code>extends</code>,
+              <code>super</code> rõ ràng thay vì prototype chain rối rắm.
             </p>
             <p>
-              Trước ES6, để làm inheritance phải dùng prototype chain phức tạp.
-              Giờ thì <code>extends</code> và <code>super</code> làm mọi thứ rõ
-              ràng hơn nhiều. Tôi không dùng class cho mọi thứ (functional
-              programming vẫn hay hơn nhiều case), nhưng khi cần OOP thì class
-              là lựa chọn hoàn hảo.
+              Mình không phải fan cứng của OOP, nhưng khi cần thì class là lựa
+              chọn ổn đấy.
             </p>
 
-            <h2>Modules - Import/Export thay vì script tags địa ngục</h2>
+            <h2>Modules - Tạm biệt script tags</h2>
             <p>
-              Ai từng làm project lớn với nhiều file JavaScript và phải quản lý
-              thứ tự <code>&lt;script&gt;</code> tags sẽ hiểu nỗi đau. ES6
-              modules là game changer với cú pháp <code>import</code> và
-              <code>export</code> gọn gàng, rõ ràng như các ngôn ngữ hiện đại
-              khác!
+              Ai từng làm project lớn với đống script tags thì sẽ hiểu nỗi đau.
+              Phải nhớ thứ tự, dependencies... ES6 modules với
+              <code>import/export</code>
+              giải quyết gọn lẹ!
             </p>
             <p>
-              <strong>Named exports</strong> vs
-              <strong>default exports</strong> - tôi thường dùng named exports
-              vì nó rõ ràng hơn và IDE hỗ trợ autocomplete tốt hơn. Default
-              export thì dùng cho main component/class của file.
-            </p>
-            <p>
-              Modules cũng giúp <strong>tree-shaking</strong> hoạt động hiệu quả
-              - bundler như Webpack chỉ include code thực sự được dùng. Bundle
-              size nhỏ hơn = trang load nhanh hơn!
+              Mình thường dùng named exports vì IDE support tốt hơn, default
+              export chỉ dùng cho main component của file thôi.
             </p>
 
-            <h2>Promises - Tạm biệt callback hell</h2>
+            <h2>Một vài tip nhỏ khi học ES6+</h2>
             <p>
-              Promises là foundation cho async programming hiện đại. Trước đây
-              code async trông như pyramid of doom với callbacks lồng nhau vô
-              tận - khó đọc, khó debug, khó maintain. Với Promises, code flat và
-              dễ đọc hơn với chuỗi <code>.then()</code> và xử lý lỗi tập trung
-              với <code>.catch()</code>.
+              <strong>Đừng học tất cả một lúc!</strong> Mình từng làm vậy và
+              cuối cùng chẳng nhớ gì cả. Học từng feature, practice nhiều rồi
+              mới chuyển sang cái khác.
             </p>
             <p>
-              Và khi kết hợp với <code>async/await</code> (ES2017), code async
-              trông như sync code - dễ đọc và dễ hiểu đến không ngờ! Tôi đã viết
-              một bài riêng về async/await vì nó quá hay! Promises + async/await
-              là combo bá đạo nhất để handle asynchronous operations.
-            </p>
-
-            <h2>Những tính năng ES2017+ tôi dùng hàng ngày</h2>
-            <p>
-              ES6 đã tuyệt, nhưng các versions sau (ES2017, ES2018, ES2019,
-              ES2020+) còn bổ sung thêm nhiều gems:
-            </p>
-
-            <h3>1. Optional Chaining (?.) - ES2020</h3>
-            <p>
-              Không còn phải check <code>null/undefined</code> từng level với
-              <code>&&</code> nữa! Optional chaining với cú pháp
-              <code>?.</code> giúp truy cập nested properties an toàn. Nếu bất
-              kỳ property nào là <code>null</code> hoặc <code>undefined</code>,
-              expression sẽ trả về <code>undefined</code> thay vì throw error.
-              Ví dụ: <code>user?.address?.city</code> thay vì
-              <code>user && user.address && user.address.city</code>
-            </p>
-
-            <h3>2. Nullish Coalescing (??) - ES2020</h3>
-            <p>
-              Tôi đã gặp bug nhiều lần vì dùng <code>||</code> khi cần
-              <code>??</code>. Với <code>||</code> operator, cả
-              <code>0</code> và <code>''</code> đều bị coi là falsy nên sẽ lấy
-              giá trị default. Nhưng với <code>??</code>, chỉ
-              <code>null</code> và <code>undefined</code> mới được coi là
-              nullish. Học được sự khác biệt này giúp tôi tránh được nhiều bugs
-              tinh vi!
-            </p>
-
-            <h3>3. Object.entries() và Object.values() - ES2017</h3>
-            <p>
-              Duyệt object giờ dễ như duyệt array với
-              <code>Object.entries()</code> để lấy cả key và value, hoặc
-              <code>Object.values()</code> để chỉ lấy values. Tôi hay dùng
-              <code>Object.entries()</code> khi cần transform object thành array
-              để dùng <code>map</code>, <code>filter</code>, v.v...
-            </p>
-
-            <h3>4. Array.includes() - ES2016</h3>
-            <p>
-              Thay vì phải dùng <code>arr.indexOf(item) !== -1</code> khó đọc,
-              giờ có <code>arr.includes(item)</code> đơn giản hơn, rõ ràng hơn,
-              và không phải nhớ check <code>!== -1</code> nữa!
-            </p>
-
-            <h2>Sự thật về Performance của ES6+</h2>
-            <p>
-              Một câu hỏi tôi thường gặp: "ES6 có chậm hơn ES5 không?". Câu trả
-              lời là:
-              <strong>Phụ thuộc vào tính năng và cách sử dụng</strong>.
+              <strong>Refactor code cũ:</strong> Cách tốt nhất để practice là
+              lấy code ES5 cũ rồi refactor sang ES6+. Vừa ôn lại kiến thức vừa
+              thấy được sự khác biệt.
             </p>
             <p>
-              Arrow functions nhanh tương đương function expressions. Classes
-              thì tương đương với prototypes. Nhưng một số tính năng có overhead
-              nhất định:
-            </p>
-            <ul>
-              <li>
-                <strong>Destructuring:</strong> Có overhead nhẹ, nhưng code dễ
-                đọc hơn rất nhiều - tradeoff xứng đáng!
-              </li>
-              <li>
-                <strong>Spread operator:</strong> Với array/object lớn có thể
-                chậm vì tạo shallow copy
-              </li>
-              <li>
-                <strong>for...of loop:</strong> Chậm hơn traditional for loop,
-                nhưng code cleaner
-              </li>
-              <li>
-                <strong>Generators:</strong> Có overhead nhưng powerful cho lazy
-                evaluation
-              </li>
-            </ul>
-            <p>
-              Nguyên tắc của tôi:
-              <strong>Code for readability first, optimize when needed</strong>.
-              Trong 99% trường hợp, sự khác biệt performance là không đáng kể,
-              nhưng code dễ đọc giúp tránh bugs và maintain dễ hơn!
-            </p>
-
-            <h2>Babel - Dùng ES6+ ngay cả trên IE11</h2>
-            <p>
-              Vấn đề với ES6+ là không phải browser nào cũng support đầy đủ. Đó
-              là lúc Babel xuất hiện - một transpiler chuyển ES6+ code thành ES5
-              tương thích với browser cũ. Babel đọc code ES6+ của bạn và compile
-              nó thành ES5 mà mọi browser đều hiểu.
+              <strong>Đọc MDN docs:</strong> Google thì nhanh nhưng MDN mới đầy
+              đủ và chính xác. Đặc biệt là phần compatibility table để biết
+              browser nào support.
             </p>
             <p>
-              Với <code>@babel/preset-env</code>, bạn config target browsers và
-              Babel tự động chỉ transpile những features không được support.
-              Super smart! Tôi luôn setup Babel trong mọi project để có thể dùng
-              thoải mái các tính năng mới nhất mà không lo compatibility.
+              <strong>Setup Babel:</strong> Để dùng thoải mái các feature mới mà
+              không lo browser cũ. @babel/preset-env tự động transpile theo
+              target browsers.
             </p>
 
-            <h2>Lộ trình học ES6+ cho người mới</h2>
-            <p>Nếu bạn mới bắt đầu với ES6+, đây là lộ trình tôi recommend:</p>
-
-            <h3>Phase 1 - Essentials (1-2 tuần):</h3>
-            <ul>
-              <li>
-                <code>let</code> & <code>const</code> - Dùng thay vì
-                <code>var</code>
-              </li>
-              <li>Arrow functions - Cho mọi function expressions</li>
-              <li>Template literals - Cho string interpolation</li>
-              <li>Destructuring - Object và array</li>
-            </ul>
-
-            <h3>Phase 2 - Intermediate (2-3 tuần):</h3>
-            <ul>
-              <li>Spread & Rest operators</li>
-              <li>Enhanced object literals</li>
-              <li>Default parameters</li>
-              <li>Promises basics</li>
-              <li>Classes (nếu cần OOP)</li>
-            </ul>
-
-            <h3>Phase 3 - Advanced (1 tháng):</h3>
-            <ul>
-              <li>Modules (import/export)</li>
-              <li>Async/await</li>
-              <li>Generators</li>
-              <li>Symbols</li>
-              <li>Iterators</li>
-              <li>Proxies & Reflect API</li>
-            </ul>
-
-            <h3>Phase 4 - Modern Features (ongoing):</h3>
-            <ul>
-              <li>Optional chaining & Nullish coalescing</li>
-              <li>BigInt</li>
-              <li>Dynamic imports</li>
-              <li>Private class fields</li>
-              <li>Top-level await</li>
-            </ul>
-
+            <h2>Kết Luận</h2>
             <p>
-              <strong>Tips học tập:</strong> Không cần học tất cả một lúc! Học
-              từng feature, practice nhiều, rồi mới chuyển sang feature tiếp
-              theo. Refactor code cũ sang ES6+ là cách tốt để practice.
+              ES6+ đã biến đổi JavaScript từ "ngôn ngữ đồ chơi" thành ngôn ngữ
+              sẵn sàng cho doanh nghiệp! Cú pháp hiện đại, tính năng mạnh mẽ,
+              trải nghiệm phát triển tốt hơn. Tiến hóa liên tục với các bản phát
+              hành hàng năm - JavaScript thú vị hơn bao giờ hết!
             </p>
+            <p>
+              ES6+ thực sự thay đổi cách mình viết JavaScript. Code clean hơn,
+              ít bug hơn, maintain dễ hơn. Nếu bạn chưa học thì bắt đầu ngay đi,
+              tin mình đi sẽ không hối hận! 😄
+            </p>
+            <p>
+              Còn feature nào của ES6+ mà bạn thích nhất? Comment bên dưới cho
+              mình biết nhé!
+            </p>
+
+            <div class="back-to-home">
+              <a href="../index.html">← Về trang chủ</a>
+            </div>
 
             <!-- Những Điều Tâm Đắc Nhất -->
             <div class="personal-insights" style="margin: 40px 0">
@@ -424,8 +268,8 @@
                   từ lexical scope, giải quyết 90% bug về this!
                 </p>
                 <p style="margin-top: 15px; font-style: italic; color: #856404">
-                  <strong>Tại sao tâm đắc:</strong> Đây là feature giúp tôi viết
-                  code sạch hơn và ít bug hơn ngay lập tức!
+                  <strong>Tại sao tâm đắc:</strong> Đây là feature giúp mình
+                  viết code sạch hơn và ít bug hơn ngay lập tức!
                 </p>
               </div>
 
@@ -608,151 +452,6 @@
                   nhiên!
                 </p>
               </div>
-            </div>
-
-            <!-- Những Khó Khăn Khi Học -->
-            <div class="learning-challenges">
-              <h3>
-                <i class="bi bi-exclamation-triangle text-warning"></i> Những
-                Khó Khăn Khi Học ES6+
-              </h3>
-              <p class="challenge-intro">
-                Dưới đây là những khó khăn mà tôi và nhiều developer khác gặp
-                phải khi học ES6+:
-              </p>
-
-              <div class="challenge-list">
-                <div class="challenge-item">
-                  <h4>
-                    <i class="bi bi-1-circle text-danger"></i> Arrow Functions
-                    và This Binding
-                  </h4>
-                  <p>
-                    <strong>Vấn đề:</strong> Arrow functions không có this
-                    riêng, kế thừa từ phạm vi cha. Gây nhầm lẫn khi dùng trong
-                    object methods.
-                  </p>
-                  <p>
-                    <strong>Giải pháp:</strong> Arrow function cho
-                    callback/array methods, regular function cho object methods
-                    và constructor.
-                  </p>
-                </div>
-
-                <div class="challenge-item">
-                  <h4>
-                    <i class="bi bi-2-circle text-danger"></i> Destructuring với
-                    Nested Objects
-                  </h4>
-                  <p>
-                    <strong>Vấn đề:</strong> Cú pháp phức tạp khi destructure
-                    object/array lồng nhau: const {user: {profile: {name}}} =
-                    data
-                  </p>
-                  <p>
-                    <strong>Giải pháp:</strong> Bắt đầu với destructuring đơn
-                    giản, từ từ học nested và giá trị mặc định.
-                  </p>
-                </div>
-
-                <div class="challenge-item">
-                  <h4>
-                    <i class="bi bi-3-circle text-danger"></i> Spread vs Rest
-                    Operator
-                  </h4>
-                  <p>
-                    <strong>Vấn đề:</strong> Cùng cú pháp (...) nhưng hoạt động
-                    khác nhau tùy ngữ cảnh, dễ nhầm lẫn.
-                  </p>
-                  <p>
-                    <strong>Giải pháp:</strong> Nhớ: Spread = "trải ra", Rest =
-                    "thu gom lại". Thực hành nhiều ví dụ khác nhau.
-                  </p>
-                </div>
-
-                <div class="challenge-item">
-                  <h4>
-                    <i class="bi bi-4-circle text-danger"></i> Template Literals
-                    với Logic Phức Tạp
-                  </h4>
-                  <p>
-                    <strong>Vấn đề:</strong> Khi logic trong ${} quá phức tạp,
-                    template literals trở nên khó đọc và duy trì.
-                  </p>
-                  <p>
-                    <strong>Giải pháp:</strong> Tách logic phức tạp ra functions
-                    riêng, chỉ dùng template literals cho nội suy đơn giản.
-                  </p>
-                </div>
-
-                <div class="challenge-item">
-                  <h4>
-                    <i class="bi bi-5-circle text-danger"></i> Tương Thích Trình
-                    Duyệt
-                  </h4>
-                  <p>
-                    <strong>Vấn đề:</strong> Tính năng ES6+ không hỗ trợ trên
-                    trình duyệt cũ, cần Babel để chuyển đổi.
-                  </p>
-                  <p>
-                    <strong>Giải pháp:</strong> Học cách thiết lập Babel, hiểu
-                    polyfills, sử dụng công cụ như Webpack để quản lý tương
-                    thích.
-                  </p>
-                </div>
-
-                <div class="challenge-item">
-                  <h4>
-                    <i class="bi bi-6-circle text-danger"></i> Lạm Dụng Arrow
-                    Functions
-                  </h4>
-                  <p>
-                    <strong>Vấn đề:</strong> Sử dụng arrow functions ở khắp nơi,
-                    kể cả khi methods cần this binding riêng.
-                  </p>
-                  <p>
-                    <strong>Giải pháp:</strong> Methods cần this binding nên
-                    dùng function thường, chỉ dùng arrow cho callbacks.
-                  </p>
-                </div>
-              </div>
-
-              <div class="learning-tips">
-                <h4>
-                  <i class="bi bi-lightbulb text-success"></i> Tips học hiệu
-                  quả:
-                </h4>
-                <ul>
-                  <li>
-                    <strong>Thực hành từng tính năng một:</strong> Đừng cố học
-                    tất cả ES6+ cùng lúc
-                  </li>
-                  <li>
-                    <strong>Viết code so sánh:</strong> So sánh ES5 vs ES6+
-                    syntax để hiểu rõ cải tiến
-                  </li>
-                  <li>
-                    <strong>Sử dụng playground:</strong> CodePen, JSFiddle để
-                    test nhanh ES6+ features
-                  </li>
-                  <li>
-                    <strong>Đọc code của người khác:</strong> GitHub
-                    repositories sử dụng ES6+ để học best practices
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <h2>Kết Luận</h2>
-            <p>
-              ES6+ đã biến đổi JavaScript từ "ngôn ngữ đồ chơi" thành ngôn ngữ
-              sẵn sàng cho doanh nghiệp! Cú pháp hiện đại, tính năng mạnh mẽ,
-              trải nghiệm phát triển tốt hơn. Tiến hóa liên tục với các bản phát
-              hành hàng năm - JavaScript thú vị hơn bao giờ hết!
-            </p>
-
-            <div class="back-to-home">
-              <a href="../index.html">← Về trang chủ</a>
             </div>
           </div>
 
